@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+    font-size: larger;
+}
+
+
+
+.pequeña {
+    width: 50px;
+    height: 50px;
+}
+
+.mediana{
+    width: 200px;
+    height: 200px;
+}
+
+/*Ajustes link icono del perfil y texto Perfil*/
+
+.profile-link {
+    margin-top: 10px;
+    margin-right: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 9999; 
+}
+.profile-link-text{
+    font-size: 20px;
+    font-weight: lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+    top: 75px;
+    right: 24px;
+}
+
+/*Ajustes Boton o caja Madres registradas*/
+
+.container {
+    display: flex;
+}
+
+.box-registradas,
+.box-nuevas {
+    cursor: pointer;
+    padding: 40px;
+    background-color: #f0f0f0;
+    text-align: center;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+    margin: 20px;
+    margin-top: -80px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.box-registradas:hover,
+.box-nuevas:hover {
+    background-color: #9cd0a4;
+    transform: scale(1.1);
+}

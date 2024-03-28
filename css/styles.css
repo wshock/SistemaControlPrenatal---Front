@@ -1,0 +1,16 @@
+/* Estos estilos son los generales (son los estilos para la
+   manchita rosada y azul    */
+
+.mancha-superior{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.mancha-inferior{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
