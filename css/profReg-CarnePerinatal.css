@@ -1,0 +1,83 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7; 
+    
+}
+.mancha-superior,
+.mancha-inferior {
+    width: 100%;
+    height: auto;
+    fill: currentColor;
+    position: fixed;
+    left: 0;
+    z-index: -1; 
+}
+
+.mancha-superior {
+    top: 0;
+}
+
+.mancha-inferior {
+    bottom: 0;
+}
+
+
+.formulario-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.campo-formulario {
+    margin-bottom: 20px;
+}
+
+.campo-formulario label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.campo-formulario input[type="text"],
+.campo-formulario input[type="number"],
+.campo-formulario select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #eff1fd88;
+}
+
+.campo-formulario input[type="radio"] {
+    margin-right: 5px;
+}
+
+.campo-formulario label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Estilos para el botón de envío del formulario */
+.campo-formulario input[type="submit"] {
+    background-color: #007bff; /* Cambia el color del botón según tu preferencia */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.campo-formulario input[type="submit"]:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse sobre el botón */
+}
+
+
