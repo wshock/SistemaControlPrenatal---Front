@@ -1,0 +1,64 @@
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.tarjeta {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33% - 20px);
+    max-width: 300px;
+    position: relative;
+}
+
+.tarjeta h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.tarjeta p {
+    margin: 0;
+}
+
+button {
+    background-color: #f7c7c7; /* Color rosado pastel claro */
+    color: #ffffff; /* Color del texto */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px; /* Espacio entre los botones */
+    display: inline-block; /* Mostrar los botones en línea */
+}
+
+/* Estilos para el contenedor de los botones */
+.contenedor-botones {
+    text-align: center; /* Centrar los botones horizontalmente */
+    margin-top: 20px; /* Separación del borde superior */
+}
+
+
+.tarjeta button{
+    background-color: #f7c7c7; /* Color de fondo de los botones */
+    color: #ffffff; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 8px 16px; /* Espaciado interno */
+    border-radius: 4px; /* Borde redondeado */
+    cursor: pointer; /* Cursor al pasar el ratón */
+}
+
+.tarjeta button[class="eliminar"]{
+    background-color: #ff5733; /* Color rojo */
+}
+
+.tarjeta button[class="editar"]{
+    background-color: #808080; /* Color gris */
+}
+
+

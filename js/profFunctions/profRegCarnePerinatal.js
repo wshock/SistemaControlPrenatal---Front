@@ -1,5 +1,5 @@
 document.getElementById("form_carnePerinatal").addEventListener("submit", async (e) => {
-    e.preventDefault();
+    
     const nombre = document.getElementById("nombre").value
     const apellido = document.getElementById("apellido").value
     const domicilio = document.getElementById("domicilio").value
@@ -40,6 +40,9 @@ document.getElementById("form_carnePerinatal").addEventListener("submit", async 
                         fecha_nacimiento, edad, etnia, alfabeta, estudios, anosMayorNivel,
                          estadoCivil, viveSola, lugarControlPrenatal, numeroIdentidad})
         })
+        if (respuesta.ok){
+            window.location.reload();
+        }
         const data = await respuesta.json();
         console.log(data);
     } catch (error) {
