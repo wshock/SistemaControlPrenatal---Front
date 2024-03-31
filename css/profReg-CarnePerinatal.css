@@ -47,6 +47,7 @@ body {
 
 .campo-formulario input[type="text"],
 .campo-formulario input[type="number"],
+.campo-formulario input[type="email"],
 .campo-formulario select {
     width: 100%;
     padding: 8px;
@@ -74,6 +75,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-top: 10px;
 }
 
 .campo-formulario input[type="submit"]:hover {
