@@ -1,13 +1,15 @@
+const urlActual = window.location.href;
+
 document.getElementById("form_carnePerinatal").addEventListener("submit", async (e) => {
     
-    const nombre = document.getElementById("nombre").value
-    const apellido = document.getElementById("apellido").value
-    const domicilio = document.getElementById("domicilio").value
-    const localidad = document.getElementById("localidad").value
-    const correo = document.getElementById("correo").value
-    const fecha_nacimiento = document.getElementById("fecha_nacimiento").value
-    const edad = document.getElementById("edad").value
-    const etnia = document.getElementById("etnia").value
+    const nombre = document.getElementById("nombreEdit").value
+    const apellido = document.getElementById("apellidoEdit").value
+    const domicilio = document.getElementById("domicilioEdit").value
+    const localidad = document.getElementById("localidadEdit").value
+    const correo = document.getElementById("correoEdit").value
+    const fecha_nacimiento = document.getElementById("fecha_nacimientoEdit").value
+    const edad = document.getElementById("edadEdit").value
+    const etnia = document.getElementById("etniaEdit").value
     const radiosAlfabeta = document.querySelectorAll("input[name='alfabeta']")
     let alfabeta;
     for (let i = 0; i<radiosAlfabeta.length; i++){
@@ -16,9 +18,9 @@ document.getElementById("form_carnePerinatal").addEventListener("submit", async 
             break
         }
     }
-    const estudios = document.getElementById("estudios").value
-    const anosMayorNivel = document.getElementById("anosMayorNivel").value
-    const estadoCivil = document.getElementById("estadoCivil").value
+    const estudios = document.getElementById("estudiosEdit").value
+    const anosMayorNivel = document.getElementById("anosMayorNivelEdit").value
+    const estadoCivil = document.getElementById("estadoCivilEdit").value
     const radiosViveSola = document.querySelectorAll("input[name='viveSola']")
     let viveSola;
     for (let i = 0; i<radiosViveSola.length; i++){
@@ -27,11 +29,11 @@ document.getElementById("form_carnePerinatal").addEventListener("submit", async 
             break
         }
     }
-    const lugarControlPrenatal = document.getElementById("lugarControlPrenatal").value
-    const numeroIdentidad = document.getElementById("numeroIdentidad").value
+    const lugarControlPrenatal = document.getElementById("lugarControlPrenatalEdit").value
+    const numeroIdentidad = document.getElementById("numeroIdentidadEdit").value
 
     try {
-        const respuesta = await fetch("http://localhost:4000/madres/add", {
+        const respuesta = await fetch(urlActual, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -41,11 +43,9 @@ document.getElementById("form_carnePerinatal").addEventListener("submit", async 
                          estadoCivil, viveSola, lugarControlPrenatal, numeroIdentidad})
         })
         if (respuesta.ok){
-            window.location.href = "/madres/add"
+            window.location.href = "/madres/list"
         }
-        const data = await respuesta.json();
-        console.log(data);
     } catch (error) {
-
+        console.log(error)
     }
-})
+});

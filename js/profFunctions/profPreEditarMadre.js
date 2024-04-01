@@ -21,14 +21,21 @@ async function alistarInputsParaEdit(){
 
     document.getElementById("nombreEdit").value = infoPaciente.nombres
     document.getElementById("apellidoEdit").value = infoPaciente.apellidos
-    document.getElementById("domicilioEdit").value=infoPaciente.domicilio
-    document.getElementById("localidadEdit").value=infoPaciente.localidad
-    document.getElementById("correoEdit").value=infoPaciente.correo
-    document.getElementById("fecha_nacimientoEdit").value=infoPaciente.fecha_nacimiento
-    document.getElementById("edadEdit").value=infoPaciente.edad
-    document.getElementById("etniaEdit").value=infoPaciente.etnia
-
-    //continuar agregando los datos para q la profesional solo edite lo que quiera :D
+    document.getElementById("domicilioEdit").value = infoPaciente.domicilio
+    document.getElementById("localidadEdit").value = infoPaciente.localidad
+    document.getElementById("correoEdit").value = infoPaciente.correo
+    let fechaFormateada = infoPaciente.fecha_nacimiento.slice(0, 10);
+    document.getElementById("fecha_nacimientoEdit").value = fechaFormateada
+    document.getElementById("edadEdit").value = infoPaciente.edad
+    document.getElementById("etniaEdit").value = infoPaciente.etnia
+    document.getElementById(infoPaciente.alfabeta.toLowerCase()+"_Alfabeta").checked = true;
+    document.getElementById("estudiosEdit").value = infoPaciente.estudios
+    document.getElementById("anosMayorNivelEdit").value = infoPaciente.anos_mayor_nivel
+    document.getElementById("estadoCivilEdit").value = infoPaciente.estado_civil
+    document.getElementById(infoPaciente.vive_sola.toLowerCase()+"_ViveSola").checked = true;
+    document.getElementById("lugarControlPrenatalEdit").value = infoPaciente.lugarControlPrenatal
+    document.getElementById("numeroIdentidadEdit").value = infoPaciente.numero_identidad
+    
 }
 
 

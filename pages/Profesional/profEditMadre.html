@@ -7,6 +7,7 @@
     <script src="/js/script.js" defer></script>
     <script src="/js/profFunctions/profRegCarnePerinatal.js" defer></script>
     <script src="/js/profFunctions/profPreEditarMadre.js" defer></script>
+    <script src="/js/profFunctions/profEditarMadre.js" defer></script>
     <title>Editar madre</title>
     <link rel="stylesheet" href="/css/profReg-CarnePerinatal.css">
 </head>
@@ -59,18 +60,18 @@
                 <label for="etnia">Etnia</label>
                 <select name="etnia" id="etniaEdit">
                     <option value="" disabled selected style="display: none;">Seleccione</option>
-                    <option value="blanca">Blanca</option>
-                    <option value="indígena">Indígena</option>
-                    <option value="mestiza">Mestiza</option>
-                    <option value="negra">Negra</option>
-                    <option value="otra">Otra</option>
+                    <option value="Blanca">Blanca</option>
+                    <option value="Indígena">Indígena</option>
+                    <option value="Mestiza">Mestiza</option>
+                    <option value="Negra">Negra</option>
+                    <option value="Otra">Otra</option>
                 </select>
             </div>
             
             <div class="campo-formulario">
                 <label>Alfabeta:</label>
                 <div>
-                    <input type="radio" id="sí_Alfabeta" name="alfabeta" value="sí">
+                    <input type="radio" id="si_Alfabeta" name="alfabeta" value="si">
                     <label for="sí">Sí</label>
                 </div>
                 <div>
@@ -84,10 +85,10 @@
                 <label for="estudios">Estudios</label>
                 <select name="estudios" id="estudiosEdit">
                     <option value="" disabled selected style="display: none;">Seleccione</option>
-                    <option value="ninguno">Ninguno</option>
-                    <option value="primaria">Primaria</option>
-                    <option value="secundaria">Secundaria</option>
-                    <option value="universidad">Universidad</option>
+                    <option value="Ninguno">Ninguno</option>
+                    <option value="Primaria">Primaria</option>
+                    <option value="Secundaria">Secundaria</option>
+                    <option value="Universidad">Universidad</option>
                 </select>
             </div>
 
@@ -101,18 +102,18 @@
                 <label for="estadoCivil">Estado civil</label>
                 <select name="estadoCivil" id="estadoCivilEdit">
                     <option value="" disabled selected style="display: none;">Seleccione</option>
-                    <option value="casada">Casada</option>
+                    <option value="Casada">Casada</option>
                     <option value="Unión estable">Unión estable</option>
-                    <option value="soltera">Soltera</option>
-                    <option value="otro">Otro</option>
+                    <option value="Soltera">Soltera</option>
+                    <option value="Otro">Otro</option>
                 </select>
             </div>
 
             <div class="campo-formulario">
                 <label>Vive sola</label>
                 <div>
-                    <input type="radio" id="sí_ViveSola" name="viveSola" value="sí">
-                    <label for="sí">Sí</label>
+                    <input type="radio" id="si_ViveSola" name="viveSola" value="si">
+                    <label for="si">Sí</label>
                 </div>
                 <div>
                     <input type="radio" id="no_ViveSola" name="viveSola" value="no">
