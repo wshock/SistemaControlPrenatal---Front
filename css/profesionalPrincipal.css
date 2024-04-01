@@ -20,7 +20,7 @@ body{
     height: 200px;
 }
 
-/*Ajustes link icono del perfil y texto Perfil*/
+
 
 .profile-link {
     margin-top: 10px;
@@ -39,7 +39,7 @@ body{
     right: 24px;
 }
 
-/*Ajustes Boton o caja Madres registradas*/
+
 
 .container {
     display: flex;

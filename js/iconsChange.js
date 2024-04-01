@@ -3,9 +3,9 @@ const icono = document.getElementById('iconoUser');
 
 function cambiarIcono() {
     if (tipoUsuarioButtons[0].checked) {
-        icono.className = 'fa-solid fa-user'; // Cambiar el icono a uno de paciente
+        icono.className = 'fa-solid fa-user'; 
     } else if (tipoUsuarioButtons[1].checked) {
-        icono.className = 'fa-solid fa-user-nurse'; // Cambiar el icono a uno de profesional
+        icono.className = 'fa-solid fa-user-nurse'; 
     }
 }
 

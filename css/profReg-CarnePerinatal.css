@@ -66,9 +66,9 @@ body {
     margin-right: 10px;
 }
 
-/* Estilos para el botón de envío del formulario */
+
 .campo-formulario input[type="submit"] {
-    background-color: #007bff; /* Cambia el color del botón según tu preferencia */
+    background-color: #007bff; 
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -79,26 +79,26 @@ body {
 }
 
 .campo-formulario input[type="submit"]:hover {
-    background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse sobre el botón */
+    background-color: #0056b3;
 }
 
 .btn-regresar {
-    position: absolute; /* Fija el botón en la pantalla */
-    top: 20px; /* Distancia desde la parte superior de la pantalla */
-    left: 20px; /* Distancia desde el lado izquierdo de la pantalla */
-    background-color: #aeefff; /* Color rosado pastel claro */
-    padding: 10px 20px; /* Ajusta el espacio dentro del botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    font-size: 16px; /* Tamaño del texto */
-    text-decoration: none; /* Sin subrayado */
-    color: white; /* Color del texto */
-    cursor: pointer; /* Cambia el cursor al pasar por encima del botón */
+    position: absolute; 
+    top: 20px;
+    left: 20px; 
+    background-color: #aeefff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    text-decoration: none; 
+    color: white; 
+    cursor: pointer; 
 }
   
-  /* Estilo cuando el cursor pasa sobre el botón */
+  
 .btn-regresar:hover {
-    background-color: #8ad3fd; /* Cambia el color de fondo al pasar el cursor */
-    color: #fff; /* Cambia el color del texto al pasar el cursor */
+    background-color: #8ad3fd; 
+    color: #fff; 
 }
 

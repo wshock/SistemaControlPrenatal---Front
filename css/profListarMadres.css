@@ -1,30 +1,30 @@
 .contenedorNoPaciente {
     text-align: center;
-    background-color: #ffffff; /* Color de fondo de la caja */
+    background-color: #ffffff; 
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     font-size: 24px;
-    color: #333333; /* Color del texto */
-    margin-bottom: 20px; /* Espacio inferior */
+    color: #333333; 
+    margin-bottom: 20px;
 }
 
 .botonAgregarPaciente {
     text-decoration: none;
-    background-color: #ffd7e6; /* Color de fondo del botón */
-    color: #ffffff; /* Color del texto del botón */
-    padding: 10px 20px; /* Espaciado interno del botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Borde redondeado */
-    cursor: pointer; /* Cursor al pasar por encima */
-    transition: background-color 0.3s ease; /* Transición de color de fondo */
+    background-color: #ffd7e6;
+    color: #ffffff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
 }
 
 .botonAgregarPaciente:hover {
-    background-color: #ffafcc; /* Cambio de color de fondo al pasar por encima */
+    background-color: #ffafcc; 
 }
 
 
@@ -61,21 +61,20 @@ body{
 }
 
 button {
-    background-color: #f7c7c7; /* Color rosado pastel claro */
-    color: #ffffff; /* Color del texto */
+    background-color: #f7c7c7; 
+    color: #ffffff; 
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    margin: 10px; /* Espacio entre los botones */
-    display: inline-block; /* Mostrar los botones en línea */
+    margin: 10px; 
+    display: inline-block; 
 }
 
-/* Estilos para el contenedor de los botones */
 .contenedor-botones {
-    text-align: center; /* Centrar los botones horizontalmente */
-    margin-top: 20px; /* Separación del borde superior */
+    text-align: center; 
+    margin-top: 20px; 
 }
 
 .botones{
@@ -87,41 +86,41 @@ button {
 .tarjeta a{
     position: relative;
     margin-top: 10px;
-    background-color: #f7c7c7; /* Color de fondo de los botones */
-    color: #ffffff; /* Color del texto */
-    border: none; /* Sin borde */
-    padding: 7px 14px; /* Espaciado interno */
-    border-radius: 4px; /* Borde redondeado */
-    cursor: pointer; /* Cursor al pasar el ratón */
+    background-color: #f7c7c7; 
+    color: #ffffff; 
+    border: none; 
+    padding: 7px 14px; 
+    border-radius: 4px; 
+    cursor: pointer; 
     text-decoration: none;
 }
 
 .tarjeta a[class="eliminar"]{
-    background-color: #ff5733; /* Color rojo */
+    background-color: #ff5733; 
 }
 
 .tarjeta a[class="editar"]{
-    background-color: #808080; /* Color gris */
+    background-color: #808080; 
 }
 
 .btn-regresar {
-    position: absolute; /* Fija el botón en la pantalla */
-    top: 20px; /* Distancia desde la parte superior de la pantalla */
-    left: 20px; /* Distancia desde el lado izquierdo de la pantalla */
-    background-color: #aeefff; /* Color rosado pastel claro */
-    padding: 10px 20px; /* Ajusta el espacio dentro del botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    font-size: 16px; /* Tamaño del texto */
-    text-decoration: none; /* Sin subrayado */
-    color: white; /* Color del texto */
-    cursor: pointer; /* Cambia el cursor al pasar por encima del botón */
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+    background-color: #aeefff; 
+    padding: 10px 20px;
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    text-decoration: none; 
+    color: white;
+    cursor: pointer; 
 }
   
-  /* Estilo cuando el cursor pasa sobre el botón */
+ 
 .btn-regresar:hover {
-    background-color: #8ad3fd; /* Cambia el color de fondo al pasar el cursor */
-    color: #fff; /* Cambia el color del texto al pasar el cursor */
+    background-color: #8ad3fd; 
+    color: #fff; 
 }
 
 
