@@ -6,8 +6,9 @@
     <link rel="stylesheet" href="/css/styles.css">
     <script src="/js/script.js" defer></script>
     <script src="/js/profFunctions/profRegCarnePerinatal.js" defer></script>
-    <title>Registrar nueva madre</title>
-    <link rel="stylesheet" href="..\..\css\profReg-CarnePerinatal.css">
+    <script src="/js/profFunctions/profPreEditarMadre.js" defer></script>
+    <title>Editar madre</title>
+    <link rel="stylesheet" href="/css/profReg-CarnePerinatal.css">
 </head>
 <body>
 
@@ -21,42 +22,42 @@
         <form id="form_carnePerinatal">
             <div class="campo-formulario">
                 <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" required>
+                <input type="text" id="nombreEdit" name="nombre" required>
             </div>
 
             <div class="campo-formulario">
                 <label for="appelido">Apellido</label>
-                <input type="text" id="apellido" name="appelido" required>
+                <input type="text" id="apellidoEdit" name="appelido" required>
             </div>
 
             <div class="campo-formulario">
                 <label for="domicilio">Domicilio</label>
-                <input type="text" id="domicilio" name="domicilio" required>
+                <input type="text" id="domicilioEdit" name="domicilio" required>
             </div>
 
             <div class="campo-formulario">
                 <label for="localidad">Localidad</label>
-                <input type="text" id="localidad" name="localidad">
+                <input type="text" id="localidadEdit" name="localidad">
             </div>
 
             <div class="campo-formulario">
                 <label for="correo">Correo</label>
-                <input type="email" id="correo" name="correo">
+                <input type="email" id="correoEdit" name="correo">
             </div>
 
             <div class="campo-formulario">
                 <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
-                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+                <input type="date" id="fecha_nacimientoEdit" name="fecha_nacimiento">
             </div>
 
             <div class="campo-formulario">
                 <label for="edad">Edad</label>
-                <input type="number" name="edad" id="edad">
+                <input type="number" name="edad" id="edadEdit">
             </div>
 
             <div class="campo-formulario">
                 <label for="etnia">Etnia</label>
-                <select name="etnia" id="etnia">
+                <select name="etnia" id="etniaEdit">
                     <option value="" disabled selected style="display: none;">Seleccione</option>
                     <option value="blanca">Blanca</option>
                     <option value="indígena">Indígena</option>
@@ -81,7 +82,7 @@
 
             <div class="campo-formulario">
                 <label for="estudios">Estudios</label>
-                <select name="estudios" id="estudios">
+                <select name="estudios" id="estudiosEdit">
                     <option value="" disabled selected style="display: none;">Seleccione</option>
                     <option value="ninguno">Ninguno</option>
                     <option value="primaria">Primaria</option>
@@ -92,13 +93,13 @@
 
             <div class="campo-formulario">
                 <label for="añosMayorNivel">Años en el mayor nivel</label>
-                <input type="number" name="añosMayorNivel" id="anosMayorNivel">
+                <input type="number" name="añosMayorNivel" id="anosMayorNivelEdit">
             </div>
 
 
             <div class="campo-formulario">
                 <label for="estadoCivil">Estado civil</label>
-                <select name="estadoCivil" id="estadoCivil">
+                <select name="estadoCivil" id="estadoCivilEdit">
                     <option value="" disabled selected style="display: none;">Seleccione</option>
                     <option value="casada">Casada</option>
                     <option value="Unión estable">Unión estable</option>
@@ -122,18 +123,18 @@
 
             <div class="campo-formulario">
                 <label for="lugarControlPrenatal">Lugar del control prenatal</label>
-                <input type="text" id="lugarControlPrenatal" name="lugarControlPrenatal" >
+                <input type="text" id="lugarControlPrenatalEdit" name="lugarControlPrenatal" >
             </div>
 
 
             <div class="campo-formulario">
                 <label for="lugarDelParto-Aborto">Lugar del parto/aborto</label>
-                <input type="text" id="lugarDelParto/Aborto" name="lugarDelParto-Aborto" >
+                <input type="text" id="lugarDelParto/AbortoEdit" name="lugarDelParto-Aborto" >
             </div>
             
             <div class="campo-formulario">
                 <label for="numeroIdentidad">Número de identidad</label>
-                <input type="number" id="numeroIdentidad" name="numeroIdentidad" >
+                <input type="number" id="numeroIdentidadEdit" name="numeroIdentidad" >
             </div>
 
             <div class="campo-formulario">

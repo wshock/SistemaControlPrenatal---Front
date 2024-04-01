@@ -1,3 +1,38 @@
+.contenedorNoPaciente {
+    text-align: center;
+    background-color: #ffffff; /* Color de fondo de la caja */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+h1 {
+    font-size: 24px;
+    color: #333333; /* Color del texto */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+.botonAgregarPaciente {
+    text-decoration: none;
+    background-color: #ffd7e6; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer; /* Cursor al pasar por encima */
+    transition: background-color 0.3s ease; /* Transición de color de fondo */
+}
+
+.botonAgregarPaciente:hover {
+    background-color: #ffafcc; /* Cambio de color de fondo al pasar por encima */
+}
+
+
+
+body{
+    font-family: Arial, sans-serif;
+}
+
 .contenedor {
     display: flex;
     flex-wrap: wrap;
@@ -18,7 +53,7 @@
 
 .tarjeta h2 {
     font-size: 1.2rem;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .tarjeta p {
@@ -43,22 +78,50 @@ button {
     margin-top: 20px; /* Separación del borde superior */
 }
 
+.botones{
+    margin-top: 20px;
+    margin-right: 25px;
+    text-align: center;
+}
 
-.tarjeta button{
+.tarjeta a{
+    position: relative;
+    margin-top: 10px;
     background-color: #f7c7c7; /* Color de fondo de los botones */
     color: #ffffff; /* Color del texto */
     border: none; /* Sin borde */
-    padding: 8px 16px; /* Espaciado interno */
+    padding: 7px 14px; /* Espaciado interno */
     border-radius: 4px; /* Borde redondeado */
     cursor: pointer; /* Cursor al pasar el ratón */
+    text-decoration: none;
 }
 
-.tarjeta button[class="eliminar"]{
+.tarjeta a[class="eliminar"]{
     background-color: #ff5733; /* Color rojo */
 }
 
-.tarjeta button[class="editar"]{
+.tarjeta a[class="editar"]{
     background-color: #808080; /* Color gris */
+}
+
+.btn-regresar {
+    position: absolute; /* Fija el botón en la pantalla */
+    top: 20px; /* Distancia desde la parte superior de la pantalla */
+    left: 20px; /* Distancia desde el lado izquierdo de la pantalla */
+    background-color: #aeefff; /* Color rosado pastel claro */
+    padding: 10px 20px; /* Ajusta el espacio dentro del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño del texto */
+    text-decoration: none; /* Sin subrayado */
+    color: white; /* Color del texto */
+    cursor: pointer; /* Cambia el cursor al pasar por encima del botón */
+}
+  
+  /* Estilo cuando el cursor pasa sobre el botón */
+.btn-regresar:hover {
+    background-color: #8ad3fd; /* Cambia el color de fondo al pasar el cursor */
+    color: #fff; /* Cambia el color del texto al pasar el cursor */
 }
 
 

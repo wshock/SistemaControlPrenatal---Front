@@ -63,3 +63,9 @@ body{
     background-color: #9cd0a4;
     transform: scale(1.1);
 }
+
+a h2{
+    text-decoration: none !important;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

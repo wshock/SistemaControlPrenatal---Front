@@ -19,6 +19,16 @@ async function listarPacientes(){
     contenedor.innerHTML = '';
     const pacientes = await obtenerListaPacientes();
 
+    if (pacientes.length === 0){
+        contenedor.innerHTML = `
+            <div class="contenedorNoPaciente">
+                <h1>¡No tienes ninguna paciente!</h1>
+                <a href="/madres/add" class="botonAgregarPaciente">Agregar Paciente</a>
+            </div>
+        `;
+        return;
+    }
+
     pacientes.forEach(paciente => {
         const tarjeta = document.createElement('div');
         tarjeta.classList.add('tarjeta');
@@ -30,8 +40,8 @@ async function listarPacientes(){
             <p>Correo electrónico: ${paciente.correo}</p>
             
             <div class="botones">
-                <button class="eliminar">Eliminar</button>
-                <button class="editar">Editar</button>
+                <a href="/madres/list/delete/${paciente.id}" class="eliminar">Eliminar</a>
+                <a href="/madres/list/edit/${paciente.id}/" class="editar">Editar</a>
             </div>
             <!-- Esto es lo q esta sujeto a cambios, se puede añadir o quitar cosas jsjsj -->
 
@@ -40,6 +50,8 @@ async function listarPacientes(){
         contenedor.appendChild(tarjeta);
     });
 }
+
+document.addEventListener('DOMContentLoaded', listarPacientes);
 
 document.getElementById('mostrarPacientes').addEventListener('click', listarPacientes);
 
