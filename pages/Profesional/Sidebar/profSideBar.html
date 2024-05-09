@@ -4,6 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    ">
+    <link rel="stylesheet" href="profSideBar.css">
+    <title>Sidebar</title>
+
+</head>
+<body>
+    <svg class="mancha-superior" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#F8DDEC" fill-opacity="1" d="M0,224L60,218.7C120,213,240,203,360,170.7C480,139,600,85,720,58.7C840,32,960,32,1080,53.3C1200,75,1320,117,1380,138.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+    </svg>
+    <div>-</div>
+
+
+    <!-- MENSAJE PARA WILLIAAAAAAAAM
+    ESTE BOTÓN DE ALGUNA MANERA DEBE REDIGIRIR A LA PANTALLA PRINCIPAL -->
+
+    
+    <button class="boton-home" id="boton-home">
+        <ion-icon name="home-outline"></ion-icon>
+        
+    </button>
+
+
+    <div  class="barra-lateral">
+        <div class="nombre-pagina">
+            <ion-icon name="menu-outline" id="menu-icon"></ion-icon>
+            <span id="menu-nombre">Formulario</span>
+        </div>
+
+
+        <button class="boton-nueva-consulta">
+            <ion-icon name="add-outline" ></ion-icon>
+            <span>Nueva consulta</span>
+        </button>
+
+        <nav class="navegacion">
+            <!-- MENSAJE PARA WILLIAAAAAAAAM
+            A ESTOS OTROS BOTONES SE LE PASA LA PÁGINA EN EL ATRIBUTO onclick="" de la etiqueta a -->
+            
+            <ul>
+                <li>
+                    <a id="boton-carné-perinatal" href="#" onclick="cargarPagina('/pages/Profesional/profReg-CarnePerinatal.html')">
+                        <ion-icon name="finger-print-outline"></ion-icon>
+                        <span>Carné perinatal</span>
+                    </a>
+                </li>
+                
+
+                <li>
+                    <a id="boton-antecedentes" href="#">
+                        <ion-icon name="scale-outline"></ion-icon>
+                        <span>Antecedentes</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a id="boton-obstétricos" href="#">
+                        <ion-icon name="female-outline"></ion-icon>
+                        <span>Obstétricos</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a id="boton-ginecológicos" href="#">
+                        <ion-icon name="rose-outline"></ion-icon>
+                        <span>Ginecológicos</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a id="boton-gestacion-anterior"href="#">
+                        <ion-icon name="albums-outline"></ion-icon>
+                        <span>Gestación anterior</span>
+                    </a>
+                </li>
+
+
+
+            </ul>
+        </nav>
+
+        <div class="linea"></div>
+    </div>
+
+    <div class="contenido" id="contenido">
+        <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
     <script src="/js/script.js" defer></script>
     <script src="/js/profFunctions/profRegCarnePerinatal.js" defer></script>
     <title>Registrar nueva madre</title>
@@ -146,5 +237,16 @@
     <svg class="mancha-inferior" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#DDF5F8" fill-opacity="1" d="M0,224L60,202.7C120,181,240,139,360,133.3C480,128,600,160,720,144C840,128,960,64,1080,48C1200,32,1320,64,1380,80L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
     </svg>
+</body>
+</html>
+    </div>
+    <div>-</div>
+    <svg class="mancha-inferior" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#DDF5F8" fill-opacity="1" d="M0,224L60,202.7C120,181,240,139,360,133.3C480,128,600,160,720,144C840,128,960,64,1080,48C1200,32,1320,64,1380,80L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+    </svg>
+    
+    <script src="profSidebar.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

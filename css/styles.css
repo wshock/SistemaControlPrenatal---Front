@@ -1,6 +1,11 @@
 /* Estos estilos son los generales (son los estilos para la
    manchita rosada y azul    */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
 
+* {
+    font-family: "Outfit", sans-serif;
+    
+}
 .mancha-superior{
     position: absolute;
     top: 0;

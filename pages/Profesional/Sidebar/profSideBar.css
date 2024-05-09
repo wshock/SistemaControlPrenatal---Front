@@ -1,0 +1,184 @@
+:root {
+    --color-barra-lateral: #FFFFFF;
+    --color-texto: #111111;
+    --coolor-texto-menu: #868890;
+    --color-boton: #111111;
+    --color-boton-texto: #FFFFFF;
+
+    --color-menu-hover: #DEDEDE;
+    --color-menu-hover-texto: #111111;
+
+    --color-linea: #EFEFEF;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+
+/*BOTÓN PARA REGRESAR AL HOME*/
+.boton-home{
+    border: 0;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--color-boton);
+    color: var(--color-boton-texto);
+    right: 20px;
+    top: 20px;
+}
+
+
+
+.boton-home:hover {
+    background-color: var(--coolor-texto-menu); 
+    color: var(--color-boton-texto); 
+}
+
+
+
+
+
+.barra-lateral {
+    position: fixed;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    border-right: #8688901f solid 1px;
+    box-shadow: 1px 0 10px 1px #c0bebe;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px 15px;
+    background-color: var(--color-barra-lateral);
+    transition: width 0.5s ease;
+}
+
+.mini-barra-lateral {
+    width: 80px; /*15padding - 50icon - 15padding*/
+
+}
+
+
+
+
+
+.barra-lateral span {
+    width: 140px;
+    white-space: nowrap;
+    font-size: 18px;
+    text-align: left;
+    opacity: 1;
+    transition: opacity 0.5s ease, width 0.5s ease;
+
+}
+
+
+.barra-lateral span.oculto {
+    opacity: 0;
+    width: 0;
+}
+
+
+/*Nombre página */
+.barra-lateral .nombre-pagina {
+    width: 100%;
+    height: 45px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center; /*Centra verticalmente*/
+}
+
+
+.barra-lateral .nombre-pagina ion-icon {
+    min-width: 50px;
+    font-size: 40px;
+    cursor: pointer;
+
+}
+
+.barra-lateral .nombre-pagina span{
+    margin-left: 5px;
+    font-size: 25px
+
+}
+
+
+
+
+
+/*Aquí el botón para agregar una nueva consulta*/
+.barra-lateral .boton-nueva-consulta {
+    width: 100%;
+    height: 45px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center; /*Verticalmentex*/
+    justify-content: center; /*Horizontalmente*/
+    border: none;
+    border-radius: 10px;
+    background-color: var(--color-boton);
+    color: var(--color-boton-texto)
+}
+
+
+.barra-lateral .boton-nueva-consulta ion-icon {
+    min-width: 50px;
+    font-size: 25px;
+}
+
+
+
+/*MENÚ NAVEGACIÓN*/
+.barra-lateral .navegacion li {
+    
+    list-style: none;
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.barra-lateral .navegacion a{
+    
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: var(--color-barra-lateral);
+    color: var(--coolor-texto-menu);
+
+}
+
+.barra-lateral .navegacion a:hover{
+    background-color: var(--color-menu-hover);
+    color: var(--color-menu-hover-texto);
+}
+
+.barra-lateral .navegacion ion-icon {
+    min-width: 50px;
+    font-size: 20px;
+}
+
+
+/*LINEA*/
+.barra-lateral .linea{
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-linea);
+}
+
