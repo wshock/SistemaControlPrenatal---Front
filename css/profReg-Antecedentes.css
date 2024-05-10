@@ -1,0 +1,50 @@
+
+
+
+.nombre-antecedente{
+    text-align: left;
+}
+
+.tipo-antecedente{
+    text-align: end;
+}
+
+
+table {
+    width: 100%;
+    
+    border-collapse: collapse;
+    
+}
+
+
+td:not(.respuesta-checkbox){
+    padding: 20px 0px;
+}
+
+th{
+    padding-bottom: 20px;
+}
+
+.campo-formulario .respuesta-checkbox {
+    text-align: center;
+}
+
+.campo-formulario .tipo-antecedente {
+    text-align: center;
+}
+
+.campo-formulario select{
+    background-color: white;
+    text-align:center;
+    width:fit-content;
+
+}
+
+.linea {
+    background-color: #0000000F;
+    width: 100%;
+    height: 2px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
