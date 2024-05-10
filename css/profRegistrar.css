@@ -83,10 +83,7 @@ body {
     background-color: #0056b3;
 }
 
-#boton-carné-perinatal{
-    background-color: var(--color-menu-hover);
-    color: var(--color-menu-hover-texto);
-}
+
 
 .btn-regresar {
     position: absolute; 
