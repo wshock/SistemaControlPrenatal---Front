@@ -1,7 +1,8 @@
 document.getElementById("form_carnePerinatal").addEventListener("submit", async (e) => {
-    
+    e.preventDefault();
     const nombre = document.getElementById("nombre").value
     const apellido = document.getElementById("apellido").value
+    console.log(apellido);
     const domicilio = document.getElementById("domicilio").value
     const localidad = document.getElementById("localidad").value
     const correo = document.getElementById("correo").value
@@ -31,7 +32,7 @@ document.getElementById("form_carnePerinatal").addEventListener("submit", async 
     const numeroIdentidad = document.getElementById("numeroIdentidad").value
 
     try {
-        const respuesta = await fetch("http://localhost:4000/madres/add", {
+        const respuesta = await fetch("http://localhost:4000/gestantes/add", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -41,10 +42,10 @@ document.getElementById("form_carnePerinatal").addEventListener("submit", async 
                          estadoCivil, viveSola, lugarControlPrenatal, numeroIdentidad})
         })
         if (respuesta.ok){
-            window.location.href = "/madres/add"
+            window.location.href = "/gestantes/add"
         }
         const data = await respuesta.json();
-        console.log(data);
+        
     } catch (error) {
 
     }
