@@ -32,6 +32,15 @@ document.getElementById("form_carnePerinatal").addEventListener("submit", async 
     const lugarControlPrenatal = document.getElementById("lugarControlPrenatalEdit").value
     const numeroIdentidad = document.getElementById("numeroIdentidadEdit").value
 
+    // Validar que todos los campos estén completos
+    if (!nombre.trim() || !apellido.trim() || !domicilio.trim() || !localidad.trim() ||
+        !correo.trim() || !fecha_nacimiento.trim() || !edad.trim() || !etnia.trim() ||
+        !alfabeta || !estudios.trim() || !anosMayorNivel.trim() || !estadoCivil.trim() ||
+        !viveSola || !lugarControlPrenatal.trim() || !numeroIdentidad.trim()) {
+            alert("Por favor completa todos los campos");
+            return;
+    }
+
     try {
         const respuesta = await fetch(urlActual, {
             method: 'POST',

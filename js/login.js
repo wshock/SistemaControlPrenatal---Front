@@ -11,6 +11,25 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
         }
     }
 
+    // Validar que se haya ingresado un usuario
+    if (!user.trim()) {
+        alert("Por favor ingresa tu nombre de usuario");
+        return;
+    }
+
+    // Validar que se haya ingresado una contraseña
+    if (!password.trim()) {
+        alert("Por favor ingresa tu contraseña");
+        return;
+    }
+
+    // Validar que se haya seleccionado un tipo de usuario
+    if (!tipoUser) {
+        alert("Por favor selecciona el tipo de usuario");
+        return;
+    }
+
+
     try {
         const respuesta = await fetch("http://localhost:4000/login", {
             method: 'POST',

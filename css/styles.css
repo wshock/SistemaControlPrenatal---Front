@@ -19,3 +19,16 @@
     right: 0;
     z-index: -1;
 }
+
+/* Estilo para los campos de entrada */
+input[type="text"] {
+    background-color: lightgray;
+    padding: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para los campos de entrada cuando están enfocados */
+input[type="text"]:focus {
+    background-color: lightblue; 
+}
+
