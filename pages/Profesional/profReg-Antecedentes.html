@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/profRegistrar.css">
+    <link rel="stylesheet" href="/css/profReg-Antecedentes.css">
     <script src="/js/script.js" defer></script>
     <title>Antecedentes</title>
 
@@ -13,6 +15,98 @@
         <path fill="#F8DDEC" fill-opacity="1" d="M0,224L60,218.7C120,213,240,203,360,170.7C480,139,600,85,720,58.7C840,32,960,32,1080,53.3C1200,75,1320,117,1380,138.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
     </svg>
 
+    <div class="formulario-container">
+        <form id="form_antecedentes">
+            <table>
+                <tr class="campo-formulario">
+                    <th class="nombre-antecedente">ANTECEDENTE</th>
+                    <th class="tipo-antecedente">FAMILIARES</th>
+                    <th class="tipo-antecedente">PERSONALES</th>
+                </tr>
+                <tr class="campo-formulario">
+                    <td>Tuberculosis</td>
+                    <td class="respuesta-checkbox"><input type="checkbox" id="tbcFamiliar" name="tbcFamiliar" value="tbcFamiliar"></td>
+                    <td class="respuesta-checkbox"><input type="checkbox" id="tbcPersonal" name="tbcPersonal" value="tbcPersonal"></td>
+                </tr>
+                <tr class="campo-formulario">
+                    <td>Diabetes</td>
+                    <td class="respuesta-checkbox"><input type="checkbox" id="diabetesFamiliar" name="diabetesFamiliar" value="diabetesFamiliarTrue"></td>
+                    <td  class="respuesta-checkbox">
+                        <select name="diabetesPersonal" id="diabetesPersonal">
+                            <option value="noDiabetesPersonal"  selected >Ninguno</option>
+                            <option value="tipo1">Tipo 1</option>
+                            <option value="tipo2">Tipo 2</option>
+                            <option value="gestacional">Gestacional</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="campo-formulario">
+                    <td>Hipertensión</td>
+                    <td class="respuesta-checkbox"><input type="checkbox" id="hipertensionFamiliar" name="hipertensionFamiliar" value="hipertensionFamiliarTrue"></td>
+                    <td  class="respuesta-checkbox"><input type="checkbox" id="hipertensionPersonal" name="hipertensionPersonal" value="hipertensionPersonalTrue"></td>
+                </tr>
+                <tr class="campo-formulario">
+                    <td>Preclampsia / eclampsia</td>
+                    <td class="respuesta-checkbox"><input type="checkbox" id="pre-eclampsiaFamiliar" name="pre-eclampsiaFamiliar" value="pre-eclampsiaFamiliarTrue"></td>
+                    <td  class="respuesta-checkbox"><input type="checkbox" id="pre-eclampsiaPersonal" name="pre-eclampsiaPersonal" value="pre-eclampsiaPersonalTrue"></td>
+                    
+                </tr>
+            </table>
+
+            <div class="linea"></div>
+
+            <div class="campo-formulario">
+                <label for="otrosAntecedentesFamiliares">Otros antecedentes familiares</label>
+                <input id="otrosAntecedentesFamiliares"type="text" name="otrosAntecedentesFamiliares">
+            </div>
+
+            <div class="campo-formulario">
+                <label for="otrosAntecedentesPersonales">Otros antecedentes personales</label>
+                <input id="otrosAntecedentesPersonales"type="text" name="otrosAntecedentesPersonales">
+            </div>
+
+            <div class="linea"></div>
+
+            <table>
+                <tr class="campo-formulario">
+                    <td>Cirugía pélvica</td>
+                    <td class="respuesta-checkbox"> <input type="checkbox" id="cirugíaPélvica" name="cirugíaPélvica" value="cirugíaPélvicaTrue"></td>
+                </tr>
+
+                <tr class="campo-formulario">
+                    <td>Infertibilidad</td>
+                    <td class="respuesta-checkbox"><input type="checkbox" id="infertibilidad" name="infertibilidad" value="infertibilidadTrue"></td>
+                </tr>
+
+                <tr class="campo-formulario">
+                    <td>VIH+</td>
+                    <td class="respuesta-checkbox"><input type="checkbox" id="vih+" name="vih+" value="vih+True"></td>
+                </tr>
+
+                <tr class="campo-formulario">
+                    <td>Cardiopatía / Nefropatía</td>
+                    <td class="respuesta-checkbox"><input type="checkbox" id="cardio-nefropatia" name="cardio-nefropatia" value="cardio-nefropatiaTrue"></td>
+                </tr>
+
+                <tr class="campo-formulario">
+                    <td>Ectópicos</td>
+                    <td class="respuesta-checkbox"><input type="checkbox" id="ectópicos" name="ectópicos" value="ectópicosTrue"></td>
+                </tr>
+
+                <tr class="campo-formulario">
+                    <td>Condición médica grave</td>
+                    <td class="respuesta-checkbox"><input type="text" id="condicion-grave" name="condicion-grave" ></td>
+                </tr>
+            </table>
+            <div class="linea"></div>
+            <div class="campo-formulario">
+                <input type="submit" id="submit" name="submit" >
+            </div>
+
+            
+        </form>
+    </div>
+    
     
 
 

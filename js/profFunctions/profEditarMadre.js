@@ -52,7 +52,7 @@ document.getElementById("form_carnePerinatal").addEventListener("submit", async 
                          estadoCivil, viveSola, lugarControlPrenatal, numeroIdentidad})
         })
         if (respuesta.ok){
-            window.location.href = "/madres/list"
+            window.location.href = "/gestantes/list"
         }
     } catch (error) {
         console.log(error)

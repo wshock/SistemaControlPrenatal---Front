@@ -1,6 +1,6 @@
 async function obtenerListaPacientes(){
     try {
-        const respuesta = await fetch("http://localhost:4000/madres/list/MadresList",{
+        const respuesta = await fetch("http://localhost:4000/gestantes/list/GestantesList",{
             method: 'GET'
         })
         if (!respuesta.ok){
@@ -23,7 +23,7 @@ async function listarPacientes(){
         contenedor.innerHTML = `
             <div class="contenedorNoPaciente">
                 <h1>¡No tienes ninguna paciente!</h1>
-                <a href="/madres/add" class="botonAgregarPaciente">Agregar Paciente</a>
+                <a href="/gestantes/add" class="botonAgregarPaciente">Agregar Paciente</a>
             </div>
         `;
         return;
@@ -40,8 +40,8 @@ async function listarPacientes(){
             <p>Correo electrónico: ${paciente.correo}</p>
             
             <div class="botones">
-                <a href="/madres/list/delete/${paciente.id}" class="eliminar">Eliminar</a>
-                <a href="/madres/list/edit/${paciente.id}/" class="editar">Editar</a>
+                <a href="/gestantes/list/delete/${paciente.id}" class="eliminar">Eliminar</a>
+                <a href="/gestantes/list/edit/${paciente.id}/" class="editar">Editar</a>
             </div>
             <!-- Esto es lo q esta sujeto a cambios, se puede añadir o quitar cosas jsjsj -->
 

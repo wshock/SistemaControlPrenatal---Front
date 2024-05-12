@@ -1,7 +1,8 @@
 document.getElementById("form_carnePerinatal").addEventListener("submit", async (e) => {
-    
+    e.preventDefault();
     const nombre = document.getElementById("nombre").value
     const apellido = document.getElementById("apellido").value
+    console.log(apellido);
     const domicilio = document.getElementById("domicilio").value
     const localidad = document.getElementById("localidad").value
     const correo = document.getElementById("correo").value
@@ -30,8 +31,18 @@ document.getElementById("form_carnePerinatal").addEventListener("submit", async 
     const lugarControlPrenatal = document.getElementById("lugarControlPrenatal").value
     const numeroIdentidad = document.getElementById("numeroIdentidad").value
 
+    function cargarPagina(url) {
+        fetch(url)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("contenido").innerHTML = data;
+        })
+    
+        .catch(error => console.error("EL contenido no se cargó", error));
+    }
+
     try {
-        const respuesta = await fetch("http://localhost:4000/madres/add", {
+        const respuesta = await fetch("http://localhost:4000/gestantes/add", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -41,10 +52,11 @@ document.getElementById("form_carnePerinatal").addEventListener("submit", async 
                          estadoCivil, viveSola, lugarControlPrenatal, numeroIdentidad})
         })
         if (respuesta.ok){
-            window.location.href = "/madres/add"
+            window.location.href = "/gestantes/add";
+            cargarPagina('pages\Profesional\profReg-Antecedentes.html')
         }
         const data = await respuesta.json();
-        console.log(data);
+        
     } catch (error) {
 
     }
