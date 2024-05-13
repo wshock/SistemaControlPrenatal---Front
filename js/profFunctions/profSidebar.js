@@ -90,6 +90,11 @@ function showPage(nombre) {
     cambiarColorBotonSiDivVisible(divCarnéPerinatal, botonCarnéPerinatal);
     cambiarColorBotonSiDivVisible(divAntecedentes, botonAntecedentes);
     cambiarColorBotonSiDivVisible(divObstétricos, botonObstétricos);
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 }
 
 // Para que las funciones netPage y prevPage guarden la data

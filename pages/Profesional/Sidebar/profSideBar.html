@@ -92,7 +92,11 @@
 
     <div class="contenido" id="contenido">
         <div class="formulario-container">
+            
             <form id="formularioRegistro">
+
+                <!-- FORMULARIO CARNE PERINATAL -->
+
                 <div class="form-page" id="form-carné-perinatal">
                     <!-- DESDE AQUÍ -->
                     <div class="campo-formulario">
@@ -201,7 +205,6 @@
                         <input type="text" id="lugarControlPrenatal" name="lugarControlPrenatal" >
                     </div>
         
-        
                     <div class="campo-formulario">
                         <label for="lugarDelParto-Aborto">Lugar del parto/aborto</label>
                         <input type="text" id="lugarDelParto/Aborto" name="lugarDelParto-Aborto" >
@@ -217,6 +220,7 @@
                 </div>
     
     
+                <!-- FORMULARIO ANTECEDENTES -->
     
                 <div class="form-page" id="form-antecedentes">
                     <!-- DESDE AQUÍ -->
@@ -236,7 +240,7 @@
                             <td class="respuesta-checkbox"><input type="checkbox" id="diabetesFamiliar" name="diabetesFamiliar" value="diabetesFamiliarTrue"></td>
                             <td  class="respuesta-checkbox">
                                 <select name="diabetesPersonal" id="diabetesPersonal">
-                                    <option value="noDiabetesPersonal"  selected >Ninguno</option>
+                                    <option value="ninguno"  selected >Ninguno</option>
                                     <option value="tipo1">Tipo 1</option>
                                     <option value="tipo2">Tipo 2</option>
                                     <option value="gestacional">Gestacional</option>
@@ -250,8 +254,8 @@
                         </tr>
                         <tr class="campo-formulario">
                             <td>Preclampsia / eclampsia</td>
-                            <td class="respuesta-checkbox"><input type="checkbox" id="pre-eclampsiaFamiliar" name="pre-eclampsiaFamiliar" value="pre-eclampsiaFamiliarTrue"></td>
-                            <td  class="respuesta-checkbox"><input type="checkbox" id="pre-eclampsiaPersonal" name="pre-eclampsiaPersonal" value="pre-eclampsiaPersonalTrue"></td>
+                            <td class="respuesta-checkbox"><input type="checkbox" id="pre_eclampsiaFamiliar" name="pre_eclampsiaFamiliar" value="pre_eclampsiaFamiliarTrue"></td>
+                            <td  class="respuesta-checkbox"><input type="checkbox" id="pre_eclampsiaPersonal" name="pre_eclampsiaPersonal" value="pre_eclampsiaPersonalTrue"></td>
                             
                         </tr>
                     </table>
@@ -267,13 +271,13 @@
                         <label for="otrosAntecedentesPersonales">Otros antecedentes personales</label>
                         <input id="otrosAntecedentesPersonales"type="text" name="otrosAntecedentesPersonales">
                     </div>
-        
+                    
                     <div class="linea"></div>
         
                     <table>
                         <tr class="campo-formulario">
                             <td>Cirugía pélvica</td>
-                            <td class="respuesta-checkbox"> <input type="checkbox" id="cirugíaPélvica" name="cirugíaPélvica" value="cirugíaPélvicaTrue"></td>
+                            <td class="respuesta-checkbox"> <input type="checkbox" id="cirugiaPelvica" name="cirugiaPelvica" value="cirugiaPelvicaTrue"></td>
                         </tr>
         
                         <tr class="campo-formulario">
@@ -288,17 +292,17 @@
         
                         <tr class="campo-formulario">
                             <td>Cardiopatía / Nefropatía</td>
-                            <td class="respuesta-checkbox"><input type="checkbox" id="cardio-nefropatia" name="cardio-nefropatia" value="cardio-nefropatiaTrue"></td>
+                            <td class="respuesta-checkbox"><input type="checkbox" id="cardio_nefropatia" name="cardio_nefropatia" value="cardio_nefropatiaTrue"></td>
                         </tr>
         
                         <tr class="campo-formulario">
                             <td>Ectópicos</td>
-                            <td class="respuesta-checkbox"><input type="checkbox" id="ectópicos" name="ectópicos" value="ectópicosTrue"></td>
+                            <td class="respuesta-checkbox"><input type="checkbox" id="ectopicos" name="ectopicos" value="ectopicosTrue"></td>
                         </tr>
         
                         <tr class="campo-formulario">
                             <td>Condición médica grave</td>
-                            <td class="respuesta-checkbox"><input type="text" id="condicion-grave" name="condicion-grave" ></td>
+                            <td class="respuesta-checkbox"><input type="text" id="condicion_grave" name="condicion_grave" ></td>
                         </tr>
                     </table>
                     <div class="linea"></div>    
@@ -308,7 +312,10 @@
                     <button class="next-btn" type="button" onclick="nextPage('form-obstétricos')">Siguiente</button>
                 </div>
     
-    
+                
+
+                <!-- FORMULARIO OBSTÉTRICOS -->
+
                 <div class="form-page" id="form-obstétricos">
                     <!-- DESDE AQUÍ -->
                     <div class="campo-formulario" id="desplegarEmbarazosPrevios">
@@ -350,6 +357,7 @@
     </svg>
     <script src="/js/profFunctions/profRegObstetricos.js"></script>
     <script src="/js/profFunctions/profSidebar.js"></script>
+    <script src="/js/profFunctions/profRegistro.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

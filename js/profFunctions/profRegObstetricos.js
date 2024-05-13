@@ -4,6 +4,7 @@ const checkDesplegarGestasPrevias = document.getElementById("gestasPrevias");
 function primerosDivs(){
     if (checkDesplegarGestasPrevias.checked) {
         divGestasPreviasDesplegado.innerHTML = `
+        
             <div class="campo-formulario">
                 <label for="gestasPreviasNumero">¿Cuántas gestas previas?</label>
                 <input type="number" id="gestasPreviasNumero" name="gestasPreviasNumero">
@@ -65,8 +66,8 @@ function actualizarNuevosDivs(){
         divPartosDesplegado.innerHTML = `
             <div class="campo-formulario">
                 <br>
-                <label for="abortosNumero">¿Cuántos?</label>
-                <input id="abortosNumero" name="abortosNumero" type="number">
+                <label for="partosNumero">¿Cuántos?</label>
+                <input id="partosNumero" name="partosNumero" type="number">
             </div>
             <div class="linea"></div>
             <p class="campo-formulario">Para el último parto previo: </p>
@@ -81,8 +82,8 @@ function actualizarNuevosDivs(){
             </div>
 
             <div class="campo-formulario">
-                <label for="partoMúltiple">¿Parto múltiple?</label>
-                <input type="checkbox" id="partoMúltiple" name="partoMúltiple" value="partoMúltipleTrue">
+                <label for="partoMultiple">¿Parto múltiple?</label>
+                <input type="checkbox" id="partoMultiple" name="partoMultiple" value="partoMultipleTrue">
             </div>
             <div class="linea"></div>
 
@@ -92,8 +93,8 @@ function actualizarNuevosDivs(){
                 <input id="numeroPartosVaginales" name="numeroPartosVaginales" type="number">
             </div>
             <div class="campo-formulario">
-                <label for="numeroPartosCesárea">¿Cuántos partos fueron por cesárea?</label>
-                <input id="numeroPartosCesárea" name="numeroPartosCesárea" type="number">
+                <label for="numeroPartosCesarea">¿Cuántos partos fueron por cesárea?</label>
+                <input id="numeroPartosCesarea" name="numeroPartosCesarea" type="number">
             </div>
             <div class="campo-formulario">
                 <label for="numeroNacidosVivos">¿Cuántos nacidos vivos?</label>
@@ -108,8 +109,8 @@ function actualizarNuevosDivs(){
                 <input id="muertos1semana" name="muertos1semana" type="number">
             </div>
             <div class="campo-formulario">
-                <label for="muertosdespués1semana">¿Cuántos murieron después de la primera semana?</label>
-                <input id="muertosdespués1semana" name="muertosdespués1semana" type="number">
+                <label for="muertosdespues1semana">¿Cuántos murieron después de la primera semana?</label>
+                <input id="muertosdespues1semana" name="muertosdespues1semana" type="number">
             </div>
             <div class="campo-formulario">
                 <label for="numeroNacidosMuertos">¿Cuántos nacidos muertos?</label>
