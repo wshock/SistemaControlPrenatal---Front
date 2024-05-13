@@ -1,4 +1,4 @@
-#desplegarEmbarazosPrevios {
+#form-obstétricos #desplegarEmbarazosPrevios {
     margin-top: 20px;
     margin-right: 40px;
     margin-left: 40px;
@@ -9,22 +9,18 @@
     border-radius: 10px;
 }
 
-#desplegarAbortos, #desplegarPartos {
+#form-obstétricos #desplegarAbortos, #form-obstétricos #desplegarPartos {
     padding: 20px;
     background-color:#00000004;
     border-radius: 10px;
     
 }
 
-#abortosDesplegado .campo-formulario, #partosDesplegado .campo-formulario {
+#form-obstétricos #abortosDesplegado .campo-formulario, #form-obstétricos #partosDesplegado .campo-formulario {
     padding: 0px 15px;
 }
 
-.campo-formulario p{
+#form-obstétricos .campo-formulario p{
     font-size:larger;
 }
 
-#boton-obstétricos{
-    background-color: var(--color-menu-hover);
-    color: var(--color-menu-hover-texto);
-}

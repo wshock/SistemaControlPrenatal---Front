@@ -1,16 +1,16 @@
 
 
 
-.nombre-antecedente{
+#form-antecedentes .nombre-antecedente{
     text-align: left;
 }
 
-.tipo-antecedente{
+#form-antecedentes .tipo-antecedente{
     text-align: end;
 }
 
 
-table {
+#form-antecedentes table {
     width: 100%;
     
     border-collapse: collapse;
@@ -18,30 +18,26 @@ table {
 }
 
 
-td:not(.respuesta-checkbox){
+#form-antecedentes td:not(.respuesta-checkbox){
     padding: 20px 0px;
 }
 
-th{
+#form-antecedentes th{
     padding-bottom: 20px;
 }
 
-.campo-formulario .respuesta-checkbox {
+#form-antecedentes .campo-formulario .respuesta-checkbox {
     text-align: center;
 }
 
-.campo-formulario .tipo-antecedente {
+#form-antecedentes .campo-formulario .tipo-antecedente {
     text-align: center;
 }
 
-.campo-formulario select{
+#form-antecedentes .campo-formulario select{
     background-color: white;
     text-align:center;
     width:fit-content;
 
 }
 
-#boton-antecedentes{
-    background-color: var(--color-menu-hover);
-    color: var(--color-menu-hover-texto);
-}

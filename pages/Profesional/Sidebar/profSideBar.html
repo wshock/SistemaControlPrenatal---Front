@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <link rel="stylesheet" href="/css/profSideBar.css">
+    <link rel="stylesheet" href="/css/profRegistrar.css">
+    <link rel="stylesheet" href="/css/profReg-CarnePerinatal.css">
+    <link rel="stylesheet" href="/css/profReg-Antecedentes.css">
+    <link rel="stylesheet" href="/css/profReg-Obstétricos.css">
     <title>Sidebar</title>
 
 </head>
@@ -43,7 +47,7 @@
             
             <ul>
                 <li>
-                    <a id="boton-carné-perinatal" href="" onclick="cargarPagina('/pages/Profesional/profReg-CarnePerinatal.html')">
+                    <a id="boton-carné-perinatal" href="#" onclick="cargarPagina('form-carné-perinatal', 'boton-carné-perinatal')">
                         <ion-icon name="finger-print-outline"></ion-icon>
                         <span>Carné perinatal</span>
                     </a>
@@ -51,14 +55,14 @@
                 
 
                 <li>
-                    <a id="boton-antecedentes" href="#" onclick="cargarPagina('/pages/Profesional/profReg-Antecedentes.html')">
+                    <a id="boton-antecedentes" href="#" onclick="cargarPagina('form-antecedentes', 'boton-antecedentes')">
                         <ion-icon name="scale-outline"></ion-icon>
                         <span>Antecedentes</span>
                     </a>
                 </li>
 
                 <li>
-                    <a id="boton-obstétricos" href="#" onclick="cargarPagina('/pages/Profesional/profReg-Obstétricos.html')">
+                    <a id="boton-obstétricos" href="#" onclick="cargarPagina('form-obstétricos', 'boton-obstétricos')">
                         <ion-icon name="female-outline"></ion-icon>
                         <span>Obstétricos</span>
                     </a>
@@ -87,163 +91,264 @@
     </div>
 
     <div class="contenido" id="contenido">
-        <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="/js/script.js" defer></script>
-    <script src="/js/profFunctions/profRegCarnePerinatal.js" defer></script>
-    <title>Registrar nueva Gestante</title>
-    <link rel="stylesheet" href="..\..\..\css\profRegistrar.css">
-    <link rel="stylesheet" href="/css/profReg-CarnePerinatal.css">
-</head>
-<body>
-
-    <svg class="mancha-superior" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#F8DDEC" fill-opacity="1" d="M0,224L60,218.7C120,213,240,203,360,170.7C480,139,600,85,720,58.7C840,32,960,32,1080,53.3C1200,75,1320,117,1380,138.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
-    </svg>
-
+        <div class="formulario-container">
+            <form id="formularioRegistro">
+                <div class="form-page" id="form-carné-perinatal">
+                    <!-- DESDE AQUÍ -->
+                    <div class="campo-formulario">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+        
+                    <div class="campo-formulario">
+                        <label for="appelido">Apellido</label>
+                        <input type="text" id="apellido" name="appelido" required>
+                    </div>
+        
+                    <div class="campo-formulario">
+                        <label for="domicilio">Domicilio</label>
+                        <input type="text" id="domicilio" name="domicilio" required>
+                    </div>
+        
+                    <div class="campo-formulario">
+                        <label for="localidad">Localidad</label>
+                        <input type="text" id="localidad" name="localidad">
+                    </div>
+        
+                    <div class="campo-formulario">
+                        <label for="correo">Correo</label>
+                        <input type="email" id="correo" name="correo">
+                    </div>
+        
+                    <div class="campo-formulario">
+                        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+                    </div>
+        
+                    <div class="campo-formulario">
+                        <label for="edad">Edad</label>
+                        <input type="number" name="edad" id="edad">
+                    </div>
+        
+                    <div class="campo-formulario">
+                        <label for="etnia">Etnia</label>
+                        <select name="etnia" id="etnia">
+                            <option value="" disabled selected style="display: none;">Seleccione</option>
+                            <option value="blanca">Blanca</option>
+                            <option value="indígena">Indígena</option>
+                            <option value="mestiza">Mestiza</option>
+                            <option value="negra">Negra</option>
+                            <option value="otra">Otra</option>
+                        </select>
+                    </div>
+                    
+                    <div class="campo-formulario">
+                        <label>Alfabeta:</label>
+                        <div>
+                            <input type="radio" id="sí_Alfabeta" name="alfabeta" value="sí">
+                            <label for="sí">Sí</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="no_Alfabeta" name="alfabeta" value="no">
+                            <label for="no">No</label>
+                        </div>
+                    </div>
+        
+        
+                    <div class="campo-formulario">
+                        <label for="estudios">Estudios</label>
+                        <select name="estudios" id="estudios">
+                            <option value="" disabled selected style="display: none;">Seleccione</option>
+                            <option value="ninguno">Ninguno</option>
+                            <option value="primaria">Primaria</option>
+                            <option value="secundaria">Secundaria</option>
+                            <option value="universidad">Universidad</option>
+                        </select>
+                    </div>
+        
+                    <div class="campo-formulario">
+                        <label for="añosMayorNivel">Años en el mayor nivel</label>
+                        <input type="number" name="añosMayorNivel" id="anosMayorNivel">
+                    </div>
+        
+        
+                    <div class="campo-formulario">
+                        <label for="estadoCivil">Estado civil</label>
+                        <select name="estadoCivil" id="estadoCivil">
+                            <option value="" disabled selected style="display: none;">Seleccione</option>
+                            <option value="casada">Casada</option>
+                            <option value="Unión estable">Unión estable</option>
+                            <option value="soltera">Soltera</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+        
+                    <div class="campo-formulario">
+                        <label>Vive sola</label>
+                        <div>
+                            <input type="radio" id="sí_ViveSola" name="viveSola" value="sí">
+                            <label for="sí">Sí</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="no_ViveSola" name="viveSola" value="no">
+                            <label for="no">No</label>
+                        </div>
+                    </div>
+        
+        
+                    <div class="campo-formulario">
+                        <label for="lugarControlPrenatal">Lugar del control prenatal</label>
+                        <input type="text" id="lugarControlPrenatal" name="lugarControlPrenatal" >
+                    </div>
+        
+        
+                    <div class="campo-formulario">
+                        <label for="lugarDelParto-Aborto">Lugar del parto/aborto</label>
+                        <input type="text" id="lugarDelParto/Aborto" name="lugarDelParto-Aborto" >
+                    </div>
+                    
+                    <div class="campo-formulario">
+                        <label for="numeroIdentidad">Número de identidad</label>
+                        <input type="number" id="numeroIdentidad" name="numeroIdentidad" >
+                    </div>
+                    <div class="linea"></div>
+                    <!-- HASTA AQUÍ --> 
+                    <button class="next-btn" type="button" onclick="nextPage('form-antecedentes')">Siguiente</button>
+                </div>
     
-
-    <div class="formulario-container">
-        <form id="form_carnePerinatal">
-            <div class="campo-formulario">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" required>
-            </div>
-
-            <div class="campo-formulario">
-                <label for="appelido">Apellido</label>
-                <input type="text" id="apellido" name="appelido" required>
-            </div>
-
-            <div class="campo-formulario">
-                <label for="domicilio">Domicilio</label>
-                <input type="text" id="domicilio" name="domicilio" required>
-            </div>
-
-            <div class="campo-formulario">
-                <label for="localidad">Localidad</label>
-                <input type="text" id="localidad" name="localidad">
-            </div>
-
-            <div class="campo-formulario">
-                <label for="correo">Correo</label>
-                <input type="email" id="correo" name="correo">
-            </div>
-
-            <div class="campo-formulario">
-                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
-                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
-            </div>
-
-            <div class="campo-formulario">
-                <label for="edad">Edad</label>
-                <input type="number" name="edad" id="edad">
-            </div>
-
-            <div class="campo-formulario">
-                <label for="etnia">Etnia</label>
-                <select name="etnia" id="etnia">
-                    <option value="" disabled selected style="display: none;">Seleccione</option>
-                    <option value="blanca">Blanca</option>
-                    <option value="indígena">Indígena</option>
-                    <option value="mestiza">Mestiza</option>
-                    <option value="negra">Negra</option>
-                    <option value="otra">Otra</option>
-                </select>
-            </div>
-            
-            <div class="campo-formulario">
-                <label>Alfabeta:</label>
-                <div>
-                    <input type="radio" id="sí_Alfabeta" name="alfabeta" value="sí">
-                    <label for="sí">Sí</label>
-                </div>
-                <div>
-                    <input type="radio" id="no_Alfabeta" name="alfabeta" value="no">
-                    <label for="no">No</label>
-                </div>
-            </div>
-
-
-            <div class="campo-formulario">
-                <label for="estudios">Estudios</label>
-                <select name="estudios" id="estudios">
-                    <option value="" disabled selected style="display: none;">Seleccione</option>
-                    <option value="ninguno">Ninguno</option>
-                    <option value="primaria">Primaria</option>
-                    <option value="secundaria">Secundaria</option>
-                    <option value="universidad">Universidad</option>
-                </select>
-            </div>
-
-            <div class="campo-formulario">
-                <label for="añosMayorNivel">Años en el mayor nivel</label>
-                <input type="number" name="añosMayorNivel" id="anosMayorNivel">
-            </div>
-
-
-            <div class="campo-formulario">
-                <label for="estadoCivil">Estado civil</label>
-                <select name="estadoCivil" id="estadoCivil">
-                    <option value="" disabled selected style="display: none;">Seleccione</option>
-                    <option value="casada">Casada</option>
-                    <option value="Unión estable">Unión estable</option>
-                    <option value="soltera">Soltera</option>
-                    <option value="otro">Otro</option>
-                </select>
-            </div>
-
-            <div class="campo-formulario">
-                <label>Vive sola</label>
-                <div>
-                    <input type="radio" id="sí_ViveSola" name="viveSola" value="sí">
-                    <label for="sí">Sí</label>
-                </div>
-                <div>
-                    <input type="radio" id="no_ViveSola" name="viveSola" value="no">
-                    <label for="no">No</label>
-                </div>
-            </div>
-
-
-            <div class="campo-formulario">
-                <label for="lugarControlPrenatal">Lugar del control prenatal</label>
-                <input type="text" id="lugarControlPrenatal" name="lugarControlPrenatal" >
-            </div>
-
-
-            <div class="campo-formulario">
-                <label for="lugarDelParto-Aborto">Lugar del parto/aborto</label>
-                <input type="text" id="lugarDelParto/Aborto" name="lugarDelParto-Aborto" >
-            </div>
-            
-            <div class="campo-formulario">
-                <label for="numeroIdentidad">Número de identidad</label>
-                <input type="number" id="numeroIdentidad" name="numeroIdentidad" >
-            </div> 
-
-            <div class="campo-formulario">
-                <input type="submit" id="submit" name="submit" >
-            </div>
     
-        </form>        
+    
+                <div class="form-page" id="form-antecedentes">
+                    <!-- DESDE AQUÍ -->
+                    <table>
+                        <tr class="campo-formulario">
+                            <th class="nombre-antecedente">ANTECEDENTE</th>
+                            <th class="tipo-antecedente">FAMILIARES</th>
+                            <th class="tipo-antecedente">PERSONALES</th>
+                        </tr>
+                        <tr class="campo-formulario">
+                            <td>Tuberculosis</td>
+                            <td class="respuesta-checkbox"><input type="checkbox" id="tbcFamiliar" name="tbcFamiliar" value="tbcFamiliar"></td>
+                            <td class="respuesta-checkbox"><input type="checkbox" id="tbcPersonal" name="tbcPersonal" value="tbcPersonal"></td>
+                        </tr>
+                        <tr class="campo-formulario">
+                            <td>Diabetes</td>
+                            <td class="respuesta-checkbox"><input type="checkbox" id="diabetesFamiliar" name="diabetesFamiliar" value="diabetesFamiliarTrue"></td>
+                            <td  class="respuesta-checkbox">
+                                <select name="diabetesPersonal" id="diabetesPersonal">
+                                    <option value="noDiabetesPersonal"  selected >Ninguno</option>
+                                    <option value="tipo1">Tipo 1</option>
+                                    <option value="tipo2">Tipo 2</option>
+                                    <option value="gestacional">Gestacional</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="campo-formulario">
+                            <td>Hipertensión</td>
+                            <td class="respuesta-checkbox"><input type="checkbox" id="hipertensionFamiliar" name="hipertensionFamiliar" value="hipertensionFamiliarTrue"></td>
+                            <td  class="respuesta-checkbox"><input type="checkbox" id="hipertensionPersonal" name="hipertensionPersonal" value="hipertensionPersonalTrue"></td>
+                        </tr>
+                        <tr class="campo-formulario">
+                            <td>Preclampsia / eclampsia</td>
+                            <td class="respuesta-checkbox"><input type="checkbox" id="pre-eclampsiaFamiliar" name="pre-eclampsiaFamiliar" value="pre-eclampsiaFamiliarTrue"></td>
+                            <td  class="respuesta-checkbox"><input type="checkbox" id="pre-eclampsiaPersonal" name="pre-eclampsiaPersonal" value="pre-eclampsiaPersonalTrue"></td>
+                            
+                        </tr>
+                    </table>
+        
+                    <div class="linea"></div>
+        
+                    <div class="campo-formulario">
+                        <label for="otrosAntecedentesFamiliares">Otros antecedentes familiares</label>
+                        <input id="otrosAntecedentesFamiliares"type="text" name="otrosAntecedentesFamiliares">
+                    </div>
+        
+                    <div class="campo-formulario">
+                        <label for="otrosAntecedentesPersonales">Otros antecedentes personales</label>
+                        <input id="otrosAntecedentesPersonales"type="text" name="otrosAntecedentesPersonales">
+                    </div>
+        
+                    <div class="linea"></div>
+        
+                    <table>
+                        <tr class="campo-formulario">
+                            <td>Cirugía pélvica</td>
+                            <td class="respuesta-checkbox"> <input type="checkbox" id="cirugíaPélvica" name="cirugíaPélvica" value="cirugíaPélvicaTrue"></td>
+                        </tr>
+        
+                        <tr class="campo-formulario">
+                            <td>Infertibilidad</td>
+                            <td class="respuesta-checkbox"><input type="checkbox" id="infertibilidad" name="infertibilidad" value="infertibilidadTrue"></td>
+                        </tr>
+        
+                        <tr class="campo-formulario">
+                            <td>VIH+</td>
+                            <td class="respuesta-checkbox"><input type="checkbox" id="vih+" name="vih+" value="vih+True"></td>
+                        </tr>
+        
+                        <tr class="campo-formulario">
+                            <td>Cardiopatía / Nefropatía</td>
+                            <td class="respuesta-checkbox"><input type="checkbox" id="cardio-nefropatia" name="cardio-nefropatia" value="cardio-nefropatiaTrue"></td>
+                        </tr>
+        
+                        <tr class="campo-formulario">
+                            <td>Ectópicos</td>
+                            <td class="respuesta-checkbox"><input type="checkbox" id="ectópicos" name="ectópicos" value="ectópicosTrue"></td>
+                        </tr>
+        
+                        <tr class="campo-formulario">
+                            <td>Condición médica grave</td>
+                            <td class="respuesta-checkbox"><input type="text" id="condicion-grave" name="condicion-grave" ></td>
+                        </tr>
+                    </table>
+                    <div class="linea"></div>    
+                    <!-- HASTA AQUÍ --> 
+    
+                    <button class="prev-btn" type="button" onclick="prevPage('form-carné-perinatal')">Anterior</button>
+                    <button class="next-btn" type="button" onclick="nextPage('form-obstétricos')">Siguiente</button>
+                </div>
+    
+    
+                <div class="form-page" id="form-obstétricos">
+                    <!-- DESDE AQUÍ -->
+                    <div class="campo-formulario" id="desplegarEmbarazosPrevios">
+                        <label for="gestasPrevias">¿Ha tenido gestas previas?</label>
+                        <br>
+                        <input type="checkbox" id="gestasPrevias" name="gestasPrevias" value="gestasPreviasTrue">
+                    </div>
+        
+                    <div id="gestasPreviasDesplegado">
+        
+        
+                    </div>
+                    <div class="linea"></div>
+    
+                    <!-- HASTA AQUÍ --> 
+                    <button class="prev-btn" type="button" onclick="prevPage('form-antecedentes')">Anterior</button>
+                    
+                    <div class="linea"></div>
+                     <div class="campo-formulario">
+                        <label for="">El submit no está estilizado, solo es para que lo puedas usar</label> <br>
+                        <input type="submit" id="submit" name="submit" >
+                    </div>
+                </div>
+    
+    
+            </form>
+
+        </div>
+
+
+
     </div>
-    <div #invisible></div>
-    <svg class="mancha-inferior" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#DDF5F8" fill-opacity="1" d="M0,224L60,202.7C120,181,240,139,360,133.3C480,128,600,160,720,144C840,128,960,64,1080,48C1200,32,1320,64,1380,80L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
-    </svg>
-</body>
-</html>
-    </div>
+
+
+
     <div>-</div>
     <svg class="mancha-inferior" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#DDF5F8" fill-opacity="1" d="M0,224L60,202.7C120,181,240,139,360,133.3C480,128,600,160,720,144C840,128,960,64,1080,48C1200,32,1320,64,1380,80L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
     </svg>
-    
+    <script src="/js/profFunctions/profRegObstetricos.js"></script>
     <script src="/js/profFunctions/profSidebar.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

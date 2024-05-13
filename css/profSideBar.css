@@ -24,7 +24,6 @@ body {
     width: 100%;
 }
 
-
 /*BOTÓN PARA REGRESAR AL HOME*/
 .boton-home{
     border: 0;
@@ -70,10 +69,7 @@ body {
 
 .mini-barra-lateral {
     width: 80px; /*15padding - 50icon - 15padding*/
-
 }
-
-
 
 
 
@@ -181,4 +177,46 @@ body {
     height: 1px;
     background-color: var(--color-linea);
 }
+
+
+
+.form-page {
+    display: none;
+}
+
+.form-page:first-child {
+    display: block;
+}
+
+/* Estilos para los botones */
+.prev-btn,
+.next-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.next-btn {
+    border: solid 2px #0000001f;
+    background-color: #00000005;
+    color: #3e9eab;
+}
+
+.prev-btn {
+    border: none;
+    background-color: #ffffff;
+    color: #3e9eab;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: #3e9eab;
+    color: #ffffff;
+}
+
+.next-btn:hover {
+    border: 2px solid transparent;
+}
+
 
