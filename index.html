@@ -21,19 +21,9 @@
         <div class="form-container">
             <img src="img\logoEmbarazada.png" alt="Logo Embarazada">
             <h1 class="titleIniciaSesion">Inicia Sesión</h1>
-            <p>Selecciona tu tipo de usuario:</p>
+           
             <form id="login-form">
 
-                <div class="seleccionTipoUsuario-container" id="selectTipoUsuario"> 
-                    <label>
-                        <input type="radio" name="tipoUsuario" value="paciente">
-                        Paciente
-                    </label>
-                    <label>
-                        <input type="radio" name="tipoUsuario" value="profesional">
-                        Profesional
-                    </label>
-                </div>
                 
                 <div class="userInput-container">
                     <label for="user" class="sr-only">User</label>
@@ -45,7 +35,7 @@
                     <i class="fa-solid fa-key fa-sm" style="color: #758cff;"></i>
                     <input type="password" name="password" id="password" placeholder="Contraseña">
                 </div>    
-                <button type="button" onclick="redirect('pages/profesional/profPrincipal.html')">Prueba</button>
+            
                 <button type="submit">Iniciar sesión</button>
                 <p class="error escondido">Error, verifica tu usuario o contraseña.</p>
             </form>

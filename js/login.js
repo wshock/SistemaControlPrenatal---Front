@@ -2,14 +2,6 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
     e.preventDefault();
     const user = document.getElementById("user").value
     const password = document.getElementById("password").value
-    const radios = document.querySelectorAll('input[name="tipoUsuario"]')
-    let tipoUser;
-    for (let i = 0; i<radios.length; i++){
-        if (radios[i].checked){
-            tipoUser = radios[i].value;
-            break;
-        }
-    }
 
     // Validar que se haya ingresado un usuario
     if (!user.trim()) {
@@ -23,11 +15,6 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
         return;
     }
 
-    // Validar que se haya seleccionado un tipo de usuario
-    if (!tipoUser) {
-        alert("Por favor selecciona el tipo de usuario");
-        return;
-    }
 
 
     try {
@@ -36,11 +23,13 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ user, password, tipoUser })
+            body: JSON.stringify({ user, password  })
         })
-        const data = await respuesta.json();
-        console.log(data);
-
+        if (respuesta.ok){
+            window.location.href = "/gestantes/";
+        } else {
+            console.log("Error en validación")
+        }
     } catch (error) {
 
     }

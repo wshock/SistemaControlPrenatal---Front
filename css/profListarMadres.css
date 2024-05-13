@@ -1,113 +1,33 @@
-.contenedorNoPaciente {
-    text-align: center;
-    background-color: #ffffff; 
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    font-size: 24px;
-    color: #333333; 
-    margin-bottom: 20px;
-}
-
-.botonAgregarPaciente {
-    text-decoration: none;
-    background-color: #ffd7e6;
-    color: #ffffff; 
-    padding: 10px 20px; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    transition: background-color 0.3s ease; 
-}
-
-.botonAgregarPaciente:hover {
-    background-color: #ffafcc; 
-}
-
-
 
 body{
     font-family: Arial, sans-serif;
-}
-
-.contenedor {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.tarjeta {
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: calc(33% - 20px);
-    max-width: 300px;
-    position: relative;
-}
-
-.tarjeta h2 {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-}
-
-.tarjeta p {
     margin: 0;
-}
-
-button {
-    background-color: #f7c7c7; 
-    color: #ffffff; 
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px; 
-    display: inline-block; 
-}
-
-.contenedor-botones {
-    text-align: center; 
-    margin-top: 20px; 
-}
-
-.botones{
-    margin-top: 20px;
-    margin-right: 25px;
+    padding: 0;
     text-align: center;
 }
 
-.tarjeta a{
-    position: relative;
-    margin-top: 10px;
-    background-color: #f7c7c7; 
-    color: #ffffff; 
-    border: none; 
-    padding: 7px 14px; 
-    border-radius: 4px; 
-    cursor: pointer; 
-    text-decoration: none;
+.titleBuscar{
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+    padding: 20px; /* Espaciado interno */
+    display: inline-block; /* Para que el tamaño se ajuste al contenido */
 }
 
-.tarjeta a[class="eliminar"]{
-    background-color: #ff5733; 
-}
-
-.tarjeta a[class="editar"]{
-    background-color: #808080; 
+p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    font-size: 30px;
+    margin-bottom: 5px;
 }
 
 .btn-regresar {
     position: absolute; 
     top: 20px; 
     left: 20px; 
-    background-color: #aeefff; 
+    background-color: #75e3ff; 
     padding: 10px 20px;
     border: none; 
     border-radius: 5px; 
@@ -123,4 +43,93 @@ button {
     color: #fff; 
 }
 
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    
+}
 
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar {
+    width: 70%;
+    height: 100%;
+    height: max-content;
+    padding: 12px; /* Aumento de la altura de la barra de búsqueda */
+    font-size: 16px;
+    border: 2px solid #ccc; /* Añadir bordes */
+    border-radius: 8px; /* Añadir esquinas redondeadas */
+    outline: none; /* Eliminar el borde resaltado al hacer clic */
+}
+
+.search-button {
+    padding: 8px 20px;
+    font-size: 16px;
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    text-decoration: none; 
+    background-color: #75e3ff;
+    color: white;
+    cursor: pointer; 
+    margin-left: 15px; /* Margen a la izquierda del botón */
+}
+  
+.search-button:hover {
+    background-color: #8ad3fd; /* Cambio de color al pasar el ratón sobre el botón */
+}
+
+.contenedor-coincidencias{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+
+.contenedorNoPaciente {
+    text-align: center;
+    background-color: #ffffff; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    padding: 20px;
+    margin: 20px auto; /* Centrar la tarjeta */
+    width: 60%; /* Tamaño del 60% de la página */
+    height: 70px; /* Altura de la barra */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tarjeta p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el botón */
+.tarjeta a {
+    padding: 10px 20px;
+    background-color: #75e3ff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tarjeta a:hover {
+    background-color: #8ad3fd;
+}

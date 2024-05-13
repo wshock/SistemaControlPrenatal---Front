@@ -19,21 +19,6 @@ async function obtenerInfoPaciente(){
 async function alistarInputsParaEdit(){
     const infoPaciente = await obtenerInfoPaciente();
 
-    if (!infoPaciente) {
-        alert("No se pudo obtener la información del paciente.");
-        return;
-    }
-
-    // Validar que todos los campos de infoPaciente estén llenos
-    if (!infoPaciente.nombres || !infoPaciente.apellidos || !infoPaciente.domicilio ||
-        !infoPaciente.localidad || !infoPaciente.correo || !infoPaciente.fecha_nacimiento ||
-        !infoPaciente.edad || !infoPaciente.etnia || !infoPaciente.alfabeta ||
-        !infoPaciente.estudios || !infoPaciente.anos_mayor_nivel || !infoPaciente.estado_civil ||
-        !infoPaciente.vive_sola || !infoPaciente.lugarControlPrenatal || !infoPaciente.numero_identidad) {
-            alert("La información del paciente está incompleta.");
-            return;
-    }
-
     document.getElementById("nombreEdit").value = infoPaciente.nombres
     document.getElementById("apellidoEdit").value = infoPaciente.apellidos
     document.getElementById("domicilioEdit").value = infoPaciente.domicilio

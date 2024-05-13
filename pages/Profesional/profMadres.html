@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/profListarMadres.css">
     <script src="/js/script.js" defer></script>
-    <script src="/js/profFunctions/profListarMadres.js" defer></script>
+    <script src="/js/profFunctions/profBuscarMadre.js" defer></script>
     <title>Gestantes</title>
 
 </head>
@@ -17,12 +17,17 @@
 
     <a href="/gestantes/" class="btn-regresar">Regresar</a>
 
-    <div class="contenedor-botones">
-        <button id="mostrarPacientes">Mostrar Pacientes</button> 
-        <button id="ocultarPacientes">Ocultar Lista</button> 
+    <p class="titleBuscar">Ingresar número de identificación de la gestante a buscar:</p>
+
+    <div class="container">
+        <div class="search-container">
+          <input type="text" class="search-bar" id="busquedaMadre" placeholder="Buscar...">
+          <button class="search-button" id="btnBuscarMadre">Buscar</button>
+        </div>
     </div>
-    
-    <div id="contenedor-pacientes" class="contenedor"></div>
+
+    <div class="contenedor-coincidencias" id="container-coincidencias"></div>
+
 
 
     <svg class="mancha-inferior" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
