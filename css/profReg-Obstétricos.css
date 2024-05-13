@@ -23,3 +23,8 @@
 .campo-formulario p{
     font-size:larger;
 }
+
+#boton-obstétricos{
+    background-color: var(--color-menu-hover);
+    color: var(--color-menu-hover-texto);
+}
