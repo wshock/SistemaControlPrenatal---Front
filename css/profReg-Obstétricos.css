@@ -1,0 +1,25 @@
+#desplegarEmbarazosPrevios {
+    margin-top: 20px;
+    margin-right: 40px;
+    margin-left: 40px;
+    padding: 10px 0;
+    text-align: center;
+    border: 2px solid #0000001a;
+    background-color: #00000003;
+    border-radius: 10px;
+}
+
+#desplegarAbortos, #desplegarPartos {
+    padding: 20px;
+    background-color:#00000004;
+    border-radius: 10px;
+    
+}
+
+#abortosDesplegado .campo-formulario, #partosDesplegado .campo-formulario {
+    padding: 0px 15px;
+}
+
+.campo-formulario p{
+    font-size:larger;
+}
