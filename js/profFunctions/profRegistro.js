@@ -1,13 +1,3 @@
-function cargarPagina(url) {
-    fetch(url)
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById("contenido").innerHTML = data;
-    })
-
-    .catch(error => console.error("EL contenido no se cargó", error));
-}
-
 
 document.getElementById("formularioRegistro").addEventListener("submit", async (e) => {
     e.preventDefault();
