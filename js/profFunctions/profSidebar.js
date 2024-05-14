@@ -90,6 +90,7 @@ function showPage(nombre) {
     cambiarColorBotonSiDivVisible(divCarnéPerinatal, botonCarnéPerinatal);
     cambiarColorBotonSiDivVisible(divAntecedentes, botonAntecedentes);
     cambiarColorBotonSiDivVisible(divObstétricos, botonObstétricos);
+    cambiarColorBotonSiDivVisible(divGinecologicos, botonGinecologicos);
 
     window.scrollTo({
         top: 0,
@@ -114,10 +115,12 @@ function prevPage(nombre) {
 const divCarnéPerinatal = document.getElementById('form-carné-perinatal');
 const divAntecedentes = document.getElementById('form-antecedentes');
 const divObstétricos = document.getElementById('form-obstétricos');
+const divGinecologicos = document.getElementById('form-ginecologicos')
 
 const botonCarnéPerinatal = document.getElementById('boton-carné-perinatal');
 const botonAntecedentes = document.getElementById('boton-antecedentes');
 const botonObstétricos = document.getElementById('boton-obstétricos');
+const botonGinecologicos = document.getElementById('boton-ginecologicos');
 
 // Cambia el color del botón que uno le pase dependiendo si el div está visible o no
 function cambiarColorBotonSiDivVisible(div, boton) {
@@ -138,4 +141,6 @@ document.addEventListener("DOMContentLoaded", function() {
     cambiarColorBotonSiDivVisible(divCarnéPerinatal, botonCarnéPerinatal);
     cambiarColorBotonSiDivVisible(divAntecedentes, botonAntecedentes);
     cambiarColorBotonSiDivVisible(divObstétricos, botonObstétricos);
+    cambiarColorBotonSiDivVisible(divGinecologicos, botonGinecologicos);
+
 });

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/profReg-CarnePerinatal.css">
     <link rel="stylesheet" href="/css/profReg-Antecedentes.css">
     <link rel="stylesheet" href="/css/profReg-Obstétricos.css">
+    <link rel="stylesheet" href="/css/profReg-Ginecologicos.css">
     <title>Sidebar</title>
 
 </head>
@@ -69,7 +70,7 @@
                 </li>
 
                 <li>
-                    <a id="boton-ginecológicos" href="#">
+                    <a id="boton-ginecologicos" href="#" onclick="cargarPagina('form-ginecologicos', 'boton-ginecologicos')">
                         <ion-icon name="rose-outline"></ion-icon>
                         <span>Ginecológicos</span>
                     </a>
@@ -230,6 +231,22 @@
                         <label for="lugarDelParto-Aborto">Lugar del anterior parto/aborto</label>
                         <input type="text" id="lugarDelParto/Aborto" name="lugarDelParto-Aborto" >
                     </div>
+
+                    <div class="campo-formulario">
+                        <label for="regimen">Regimen</label><p class="asterisco">*</p>
+                        <select name="regimen" id="regimen" required>
+                            <option value="" disabled selected style="display: none;">Seleccione</option>
+                            <option value="contributivo">Contributivo</option>
+                            <option value="subsidiado">Subsidiado</option>
+                            <option value="vinculado">Vinculado</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="eps">Nombre EPS/ARS</label>
+                        <input type="text" id="eps" name="eps">
+                    </div>
                     
                     
                     <div class="linea"></div>
@@ -350,10 +367,66 @@
     
                     <!-- HASTA AQUÍ --> 
                     <button class="prev-btn" type="button" onclick="prevPage('form-antecedentes')">Anterior</button>
-                    
-                    <div class="linea"></div>
+                    <button class="next-btn" type="button" onclick="nextPage('form-ginecologicos')">Siguiente</button>
+
+                </div>
+
+
+
+                <!-- FORMULARIO GINECOLÓGICOS -->
+
+                <div class="form-page" id="form-ginecologicos">
+                    <!-- DESDE AQUÍ -->
                     <div class="campo-formulario">
-                        <label for="">El submit no está estilizado, solo es para que lo puedas usar</label> <br>
+                        <label for="planeadoODeseado">Embarazo planeado/deseado</label>
+                        <input type="checkbox" name="planeadoODeseado" id="planeadoODeseado" value="planeadoODeseadoTrue">
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="usabaAnticonceptivo">Usaba método anticonceptivo</label>
+                        <input type="checkbox" name="usabaAnticonceptivo" id="usabaAnticonceptivo" value="usabaAnticonceptivoTrue">
+                    </div>
+
+                    <div id="desplegarFalloMetodoAnticonceptivo">
+                        <table>
+                            <tr class="campo-formulario">
+                                <td>Barrera</td>
+                                <td class="respuesta-checkbox"> <input type="checkbox" name="barrera" id="barrera" value="barreraTrue"></td>
+                            </tr>
+            
+                            <tr class="campo-formulario">
+                                <td>DIU</td>
+                                <td class="respuesta-checkbox"><input type="checkbox" name="DIU" id="DIU" value="DIUTrue"></td>
+                            </tr>
+            
+                            <tr class="campo-formulario">
+                                <td>Hormonal</td>
+                                <td class="respuesta-checkbox"><input type="checkbox" name="hormonal" id="hormonal" value="hormonalTrue"></td>
+                            </tr>
+            
+                            <tr class="campo-formulario">
+                                <td>Emergencia</td>
+                                <td class="respuesta-checkbox"><input type="checkbox" name="emergencia" id="emergencia" value="emergenciaTrue"></td>
+                            </tr>
+            
+                            <tr class="campo-formulario">
+                                <td>Ligadura</td>
+                                <td class="respuesta-checkbox"><input type="checkbox" name="emergencia" id="emergencia" value="emergenciaTrue"></td>
+                            </tr>
+            
+                            <tr class="campo-formulario">
+                                <td>Otro / No aplica</td>
+                                <td class="respuesta-checkbox"><input type="checkbox" name="otro" id="otro" value="otroTrue"></td>
+                            </tr>
+                        </table>
+                        
+                    </div>
+                    <div class="linea"></div>
+                    
+                    <!-- HASTA AQUÍ --> 
+
+                    <div class="campo-formulario">
+                        <button class="prev-btn" type="button" onclick="prevPage('form-obstétricos')">Anterior</button>
                         <input type="submit" id="submit" name="submit" >
                     </div>
                 </div>
@@ -377,6 +450,7 @@
     <script src="/js/profFunctions/profSidebar.js"></script>
     <script src="/js/profFunctions/profRegistro.js"></script>
     <script src="/js/profFunctions/profCalcularEdad.js"></script>
+    <script src="/js/profFunctions/profRegGinecologicos.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

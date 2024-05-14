@@ -10,7 +10,7 @@
 }
 
 
-#form-antecedentes table {
+table {
     width: 100%;
     
     border-collapse: collapse;
@@ -18,17 +18,19 @@
 }
 
 
-#form-antecedentes td:not(.respuesta-checkbox){
+td:not(.respuesta-checkbox){
     padding: 20px 0px;
 }
 
-#form-antecedentes th{
+th{
     padding-bottom: 20px;
 }
 
-#form-antecedentes .campo-formulario .respuesta-checkbox {
+.campo-formulario .respuesta-checkbox {
     text-align: center;
 }
+
+
 
 #form-antecedentes .campo-formulario .tipo-antecedente {
     text-align: center;
