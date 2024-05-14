@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/css/profReg-CarnePerinatal.css">
     <link rel="stylesheet" href="/css/profReg-Antecedentes.css">
     <link rel="stylesheet" href="/css/profReg-Obstétricos.css">
-    <title>Sidebar</title>
+    <title>EditSidebar</title>
 
 </head>
 <body>
@@ -19,15 +19,12 @@
     </svg>
     <div>-</div>
 
-
-    <!-- MENSAJE PARA WILLIAAAAAAAAM
-    ESTE BOTÓN DE ALGUNA MANERA DEBE REDIGIRIR A LA PANTALLA PRINCIPAL -->
+    
 
     
     <button class="boton-home" id="boton-home" onclick="window.location.href = '/gestantes/', localStorage.clear();">
         <ion-icon name="home-outline"></ion-icon>
     </button>
-
 
     <div  class="barra-lateral">
         <div class="nombre-pagina">
@@ -35,15 +32,13 @@
             <span id="menu-nombre">Formulario</span>
         </div>
 
-
         <button class="boton-nueva-consulta">
             <ion-icon name="add-outline" ></ion-icon>
             <span>Nueva consulta</span>
         </button>
 
         <nav class="navegacion">
-            <!-- MENSAJE PARA WILLIAAAAAAAAM
-            A ESTOS OTROS BOTONES SE LE PASA LA PÁGINA EN EL ATRIBUTO onclick="" de la etiqueta a -->
+            
             
             <ul>
                 <li>
@@ -83,7 +78,6 @@
                 </li>
 
 
-
             </ul>
         </nav>
 
@@ -101,55 +95,55 @@
                     <!-- DESDE AQUÍ -->
                     <div class="campo-formulario">
                         <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" required>
+                        <input type="text" id="nombreEdit" name="nombre" required>
                     </div>
         
                     <div class="campo-formulario">
                         <label for="appelido">Apellido</label>
-                        <input type="text" id="apellido" name="appelido" required>
+                        <input type="text" id="apellidoEdit" name="appelido" required>
                     </div>
         
                     <div class="campo-formulario">
                         <label for="domicilio">Domicilio</label>
-                        <input type="text" id="domicilio" name="domicilio" required>
+                        <input type="text" id="domicilioEdit" name="domicilio" required>
                     </div>
         
                     <div class="campo-formulario">
                         <label for="localidad">Localidad</label>
-                        <input type="text" id="localidad" name="localidad">
+                        <input type="text" id="localidadEdit" name="localidad">
                     </div>
         
                     <div class="campo-formulario">
                         <label for="correo">Correo</label>
-                        <input type="email" id="correo" name="correo">
+                        <input type="email" id="correoEdit" name="correo">
                     </div>
         
                     <div class="campo-formulario">
                         <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
-                        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+                        <input type="date" id="fecha_nacimientoEdit" name="fecha_nacimiento">
                     </div>
         
                     <div class="campo-formulario">
                         <label for="edad">Edad</label>
-                        <input type="number" name="edad" id="edad">
+                        <input type="number" name="edad" id="edadEdit">
                     </div>
         
                     <div class="campo-formulario">
                         <label for="etnia">Etnia</label>
-                        <select name="etnia" id="etnia">
+                        <select name="etnia" id="etniaEdit">
                             <option value="" disabled selected style="display: none;">Seleccione</option>
-                            <option value="blanca">Blanca</option>
-                            <option value="indígena">Indígena</option>
-                            <option value="mestiza">Mestiza</option>
-                            <option value="negra">Negra</option>
-                            <option value="otra">Otra</option>
+                            <option value="Blanca">Blanca</option>
+                            <option value="Indígena">Indígena</option>
+                            <option value="Mestiza">Mestiza</option>
+                            <option value="Negra">Negra</option>
+                            <option value="Otra">Otra</option>
                         </select>
                     </div>
                     
                     <div class="campo-formulario">
                         <label>Alfabeta:</label>
                         <div>
-                            <input type="radio" id="sí_Alfabeta" name="alfabeta" value="sí">
+                            <input type="radio" id="si_Alfabeta" name="alfabeta" value="si">
                             <label for="sí">Sí</label>
                         </div>
                         <div>
@@ -161,36 +155,36 @@
         
                     <div class="campo-formulario">
                         <label for="estudios">Estudios</label>
-                        <select name="estudios" id="estudios">
+                        <select name="estudios" id="estudiosEdit">
                             <option value="" disabled selected style="display: none;">Seleccione</option>
-                            <option value="ninguno">Ninguno</option>
-                            <option value="primaria">Primaria</option>
-                            <option value="secundaria">Secundaria</option>
-                            <option value="universidad">Universidad</option>
+                            <option value="Ninguno">Ninguno</option>
+                            <option value="Primaria">Primaria</option>
+                            <option value="Secundaria">Secundaria</option>
+                            <option value="Universidad">Universidad</option>
                         </select>
                     </div>
         
                     <div class="campo-formulario">
                         <label for="añosMayorNivel">Años en el mayor nivel</label>
-                        <input type="number" name="añosMayorNivel" id="anosMayorNivel">
+                        <input type="number" name="añosMayorNivel" id="anosMayorNivelEdit">
                     </div>
         
         
                     <div class="campo-formulario">
                         <label for="estadoCivil">Estado civil</label>
-                        <select name="estadoCivil" id="estadoCivil">
+                        <select name="estadoCivil" id="estadoCivilEdit">
                             <option value="" disabled selected style="display: none;">Seleccione</option>
-                            <option value="casada">Casada</option>
+                            <option value="Casada">Casada</option>
                             <option value="Unión estable">Unión estable</option>
-                            <option value="soltera">Soltera</option>
-                            <option value="otro">Otro</option>
+                            <option value="Soltera">Soltera</option>
+                            <option value="Otro">Otro</option>
                         </select>
                     </div>
         
                     <div class="campo-formulario">
                         <label>Vive sola</label>
                         <div>
-                            <input type="radio" id="sí_ViveSola" name="viveSola" value="sí">
+                            <input type="radio" id="si_ViveSola" name="viveSola" value="si">
                             <label for="sí">Sí</label>
                         </div>
                         <div>
@@ -202,17 +196,17 @@
         
                     <div class="campo-formulario">
                         <label for="lugarControlPrenatal">Lugar del control prenatal</label>
-                        <input type="text" id="lugarControlPrenatal" name="lugarControlPrenatal" >
+                        <input type="text" id="lugarControlPrenatalEdit" name="lugarControlPrenatal" >
                     </div>
         
                     <div class="campo-formulario">
                         <label for="lugarDelParto-Aborto">Lugar del parto/aborto</label>
-                        <input type="text" id="lugarDelParto/Aborto" name="lugarDelParto-Aborto" >
+                        <input type="text" id="lugarDelParto/AbortoEdit" name="lugarDelParto-Aborto" >
                     </div>
                     
                     <div class="campo-formulario">
                         <label for="numeroIdentidad">Número de identidad</label>
-                        <input type="number" id="numeroIdentidad" name="numeroIdentidad" >
+                        <input type="number" id="numeroIdentidadEdit" name="numeroIdentidad" >
                     </div>
                     <div class="linea"></div>
                     <!-- HASTA AQUÍ --> 
@@ -232,14 +226,14 @@
                         </tr>
                         <tr class="campo-formulario">
                             <td>Tuberculosis</td>
-                            <td class="respuesta-checkbox"><input type="checkbox" id="tbcFamiliar" name="tbcFamiliar" value="tbcFamiliar"></td>
-                            <td class="respuesta-checkbox"><input type="checkbox" id="tbcPersonal" name="tbcPersonal" value="tbcPersonal"></td>
+                            <td class="respuesta-checkbox"><input type="checkbox" id="tbcFamiliarEdit" name="tbcFamiliar" value="tbcFamiliar"></td>
+                            <td class="respuesta-checkbox"><input type="checkbox" id="tbcPersonalEdit" name="tbcPersonal" value="tbcPersonal"></td>
                         </tr>
                         <tr class="campo-formulario">
                             <td>Diabetes</td>
-                            <td class="respuesta-checkbox"><input type="checkbox" id="diabetesFamiliar" name="diabetesFamiliar" value="diabetesFamiliarTrue"></td>
+                            <td class="respuesta-checkbox"><input type="checkbox" id="diabetesFamiliarEdit" name="diabetesFamiliar" value="diabetesFamiliarTrue"></td>
                             <td  class="respuesta-checkbox">
-                                <select name="diabetesPersonal" id="diabetesPersonal">
+                                <select name="diabetesPersonal" id="diabetesPersonalEdit">
                                     <option value="ninguno"  selected >Ninguno</option>
                                     <option value="tipo1">Tipo 1</option>
                                     <option value="tipo2">Tipo 2</option>
@@ -249,13 +243,13 @@
                         </tr>
                         <tr class="campo-formulario">
                             <td>Hipertensión</td>
-                            <td class="respuesta-checkbox"><input type="checkbox" id="hipertensionFamiliar" name="hipertensionFamiliar" value="hipertensionFamiliarTrue"></td>
-                            <td  class="respuesta-checkbox"><input type="checkbox" id="hipertensionPersonal" name="hipertensionPersonal" value="hipertensionPersonalTrue"></td>
+                            <td class="respuesta-checkbox"><input type="checkbox" id="hipertensionFamiliarEdit" name="hipertensionFamiliar" value="hipertensionFamiliarTrue"></td>
+                            <td  class="respuesta-checkbox"><input type="checkbox" id="hipertensionPersonalEdit" name="hipertensionPersonal" value="hipertensionPersonalTrue"></td>
                         </tr>
                         <tr class="campo-formulario">
                             <td>Preclampsia / eclampsia</td>
-                            <td class="respuesta-checkbox"><input type="checkbox" id="pre_eclampsiaFamiliar" name="pre_eclampsiaFamiliar" value="pre_eclampsiaFamiliarTrue"></td>
-                            <td  class="respuesta-checkbox"><input type="checkbox" id="pre_eclampsiaPersonal" name="pre_eclampsiaPersonal" value="pre_eclampsiaPersonalTrue"></td>
+                            <td class="respuesta-checkbox"><input type="checkbox" id="pre_eclampsiaFamiliarEdit" name="pre_eclampsiaFamiliar" value="pre_eclampsiaFamiliarTrue"></td>
+                            <td  class="respuesta-checkbox"><input type="checkbox" id="pre_eclampsiaPersonalEdit" name="pre_eclampsiaPersonal" value="pre_eclampsiaPersonalTrue"></td>
                             
                         </tr>
                     </table>
@@ -264,12 +258,12 @@
         
                     <div class="campo-formulario">
                         <label for="otrosAntecedentesFamiliares">Otros antecedentes familiares</label>
-                        <input id="otrosAntecedentesFamiliares"type="text" name="otrosAntecedentesFamiliares">
+                        <input id="otrosAntecedentesFamiliaresEdit"type="text" name="otrosAntecedentesFamiliares">
                     </div>
         
                     <div class="campo-formulario">
                         <label for="otrosAntecedentesPersonales">Otros antecedentes personales</label>
-                        <input id="otrosAntecedentesPersonales"type="text" name="otrosAntecedentesPersonales">
+                        <input id="otrosAntecedentesPersonalesEdit"type="text" name="otrosAntecedentesPersonales">
                     </div>
                     
                     <div class="linea"></div>
@@ -277,32 +271,32 @@
                     <table>
                         <tr class="campo-formulario">
                             <td>Cirugía pélvica</td>
-                            <td class="respuesta-checkbox"> <input type="checkbox" id="cirugiaPelvica" name="cirugiaPelvica" value="cirugiaPelvicaTrue"></td>
+                            <td class="respuesta-checkbox"> <input type="checkbox" id="cirugiaPelvicaEdit" name="cirugiaPelvica" value="cirugiaPelvicaTrue"></td>
                         </tr>
         
                         <tr class="campo-formulario">
                             <td>Infertibilidad</td>
-                            <td class="respuesta-checkbox"><input type="checkbox" id="infertibilidad" name="infertibilidad" value="infertibilidadTrue"></td>
+                            <td class="respuesta-checkbox"><input type="checkbox" id="infertibilidadEdit" name="infertibilidad" value="infertibilidadTrue"></td>
                         </tr>
         
                         <tr class="campo-formulario">
                             <td>VIH+</td>
-                            <td class="respuesta-checkbox"><input type="checkbox" id="vih+" name="vih+" value="vih+True"></td>
+                            <td class="respuesta-checkbox"><input type="checkbox" id="vih+Edit" name="vih+" value="vih+True"></td>
                         </tr>
         
                         <tr class="campo-formulario">
                             <td>Cardiopatía / Nefropatía</td>
-                            <td class="respuesta-checkbox"><input type="checkbox" id="cardio_nefropatia" name="cardio_nefropatia" value="cardio_nefropatiaTrue"></td>
+                            <td class="respuesta-checkbox"><input type="checkbox" id="cardio_nefropatiaEdit" name="cardio_nefropatia" value="cardio_nefropatiaTrue"></td>
                         </tr>
         
                         <tr class="campo-formulario">
                             <td>Ectópicos</td>
-                            <td class="respuesta-checkbox"><input type="checkbox" id="ectopicos" name="ectopicos" value="ectopicosTrue"></td>
+                            <td class="respuesta-checkbox"><input type="checkbox" id="ectopicosEdit" name="ectopicos" value="ectopicosTrue"></td>
                         </tr>
         
                         <tr class="campo-formulario">
                             <td>Condición médica grave</td>
-                            <td class="respuesta-checkbox"><input type="text" id="condicion_grave" name="condicion_grave" ></td>
+                            <td class="respuesta-checkbox"><input type="text" id="condicion_graveEdit" name="condicion_grave" ></td>
                         </tr>
                     </table>
                     <div class="linea"></div>    
@@ -321,7 +315,7 @@
                     <div class="campo-formulario" id="desplegarEmbarazosPrevios">
                         <label for="gestasPrevias">¿Ha tenido gestas previas?</label>
                         <br>
-                        <input type="checkbox" id="gestasPrevias" name="gestasPrevias" value="gestasPreviasTrue">
+                        <input type="checkbox" id="gestasPreviasEdit" name="gestasPrevias" value="gestasPreviasTrue">
                     </div>
         
                     <div id="gestasPreviasDesplegado">
@@ -346,18 +340,17 @@
         </div>
 
 
-
     </div>
-
 
 
     <div>-</div>
     <svg class="mancha-inferior" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#DDF5F8" fill-opacity="1" d="M0,224L60,202.7C120,181,240,139,360,133.3C480,128,600,160,720,144C840,128,960,64,1080,48C1200,32,1320,64,1380,80L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
     </svg>
-    <script src="/js/profFunctions/profRegObstetricos.js"></script>
+    <script type="module" src="/js/profFunctions/profRegObstetricosEdit.js"></script>
     <script src="/js/profFunctions/profSidebar.js"></script>
-    <script src="/js/profFunctions/profRegistro.js"></script>
+    <script src="/js/profFunctions/profEditarMadre.js"></script>
+    <script type="module" src="/js/profFunctions/profPreEditarMadre.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

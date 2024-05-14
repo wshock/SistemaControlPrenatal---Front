@@ -1,7 +1,11 @@
 const urlActual = window.location.href;
 
-document.getElementById("form_carnePerinatal").addEventListener("submit", async (e) => {
-    
+
+document.getElementById("formularioRegistro").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    // Obteniendo datos del formulario Carne Perinatal:
+
     const nombre = document.getElementById("nombreEdit").value
     const apellido = document.getElementById("apellidoEdit").value
     const domicilio = document.getElementById("domicilioEdit").value
@@ -32,14 +36,85 @@ document.getElementById("form_carnePerinatal").addEventListener("submit", async 
     const lugarControlPrenatal = document.getElementById("lugarControlPrenatalEdit").value
     const numeroIdentidad = document.getElementById("numeroIdentidadEdit").value
 
-    // Validar que todos los campos estén completos
-    if (!nombre.trim() || !apellido.trim() || !domicilio.trim() || !localidad.trim() ||
-        !correo.trim() || !fecha_nacimiento.trim() || !edad.trim() || !etnia.trim() ||
-        !alfabeta || !estudios.trim() || !anosMayorNivel.trim() || !estadoCivil.trim() ||
-        !viveSola || !lugarControlPrenatal.trim() || !numeroIdentidad.trim()) {
-            alert("Por favor completa todos los campos");
-            return;
-    }
+    // Juanpa, esto sería mejor si va en profRegistro :D
+    // if (!nombre.trim() || !apellido.trim() || !domicilio.trim() || !localidad.trim() ||
+    //     !correo.trim() || !fecha_nacimiento.trim() || !edad.trim() || !etnia.trim() ||
+    //     !alfabeta || !estudios.trim() || !anosMayorNivel.trim() || !estadoCivil.trim() ||
+    //     !viveSola || !lugarControlPrenatal.trim() || !numeroIdentidad.trim()) {
+    //         alert("Por favor completa todos los campos");
+    //         return;
+    // }
+
+
+    // Obteniendo datos del formulario Antecedentes:
+
+    const tbcFamiliar = (document.getElementById("tbcFamiliarEdit").checked === true) ? "Si" : "No";
+    const tbcPersonal = (document.getElementById("tbcPersonalEdit").checked === true) ? "Si" : "No";
+    const diabetesFamiliar = (document.getElementById("diabetesFamiliarEdit").checked === true) ? "Si" : "No";
+    const diabetesPersonal = document.getElementById("diabetesPersonalEdit").value 
+    const hipertensionFamiliar = (document.getElementById("hipertensionFamiliarEdit").checked === true) ? "Si" : "No";
+    const hipertensionPersonal = (document.getElementById("hipertensionPersonalEdit").checked === true) ? "Si" : "No";
+    const pre_eclampsiaFamiliar = (document.getElementById("pre_eclampsiaFamiliarEdit").checked === true) ? "Si" : "No";
+    const pre_eclampsiaPersonal = (document.getElementById("pre_eclampsiaPersonalEdit").checked === true) ? "Si" : "No";
+    const otrosAntecedentesFamiliares = document.getElementById("otrosAntecedentesFamiliaresEdit").value
+    const otrosAntecedentesPersonales = document.getElementById("otrosAntecedentesPersonalesEdit").value
+    const cirugiaPelvica = (document.getElementById("cirugiaPelvicaEdit").checked === true) ? "Si" : "No";
+    const infertibilidad = (document.getElementById("infertibilidadEdit").checked === true) ? "Si" : "No";
+    const vih = (document.getElementById("vih+Edit").checked === true) ? "Si" : "No"; // diferente al campo de la bd
+    const cardio_nefropatia = (document.getElementById("cardio_nefropatiaEdit").checked === true) ? "Si" : "No";
+    const ectopicos = (document.getElementById("ectopicosEdit").checked === true) ? "Si" : "No";
+    const condicion_grave = document.getElementById("condicion_graveEdit").value
+
+
+    // Obteniendo datos del formulario Obstétricos:
+
+    // inicializo todos los valores como "N/A" ya que no siempre se seleccionarán todas las opciones y quiero evitar errores con la BD:
+    let gestasPrevias = "N/A";
+    let gestasPreviasNumero = 0;
+    let tuvoAbortos = "N/A";
+    let abortosNumero = 0;
+    let tresAbortosConsecutivos = "N/A";
+    let tuvoPartos = "N/A";
+    let partosNumero = 0;
+    let pesoMenor2500g = "N/A";
+    let pesoMayor4000g = "N/A";
+    let partoMultiple = "N/A";
+    let numeroPartosVaginales = 0;
+    let numeroPartosCesarea = 0;
+    let numeroNacidosVivos = 0;
+    let numeroViven = 0;
+    let muertos1semana = 0;
+    let muertosdespues1semana = 0;
+    let numeroNacidosMuertos = 0;
+
+
+    if ( document.getElementById("gestasPreviasEdit").checked === true ) {
+
+        gestasPrevias = "Si";
+        gestasPreviasNumero = document.getElementById("gestasPreviasNumeroEdit").value
+
+        if ( document.getElementById("tuvoAbortosEdit").checked === true ) {
+            tuvoAbortos = "Si";
+            abortosNumero = document.getElementById("abortosNumeroEdit").value
+            tresAbortosConsecutivos = (document.getElementById("tresAbortosConsecutivosEdit").checked === true) ? "Si" : "No";
+        }
+
+        if ( document.getElementById("tuvoPartosEdit").checked === true ){
+            tuvoPartos = "Si";
+            partosNumero = document.getElementById("partosNumeroEdit").value
+            pesoMenor2500g = (document.getElementById("pesoMenor2500gEdit").checked === true) ? "Si" : "No";
+            pesoMayor4000g = (document.getElementById("pesoMayor4000gEdit").checked === true) ? "Si" : "No";
+            partoMultiple = (document.getElementById("partoMultipleEdit").checked === true) ? "Si" : "No";
+            numeroPartosVaginales = document.getElementById("numeroPartosVaginalesEdit").value
+            numeroPartosCesarea = document.getElementById("numeroPartosCesareaEdit").value
+            numeroNacidosVivos = document.getElementById("numeroNacidosVivosEdit").value
+            numeroViven = document.getElementById("numeroVivenEdit").value
+            muertos1semana = document.getElementById("muertos1semanaEdit").value
+            muertosdespues1semana = document.getElementById("muertosdespues1semanaEdit").value
+            numeroNacidosMuertos = document.getElementById("numeroNacidosMuertosEdit").value
+        }
+    } 
+
 
     try {
         const respuesta = await fetch(urlActual, {
@@ -49,12 +124,21 @@ document.getElementById("form_carnePerinatal").addEventListener("submit", async 
             },
             body: JSON.stringify({nombre, apellido, domicilio, localidad, correo, 
                         fecha_nacimiento, edad, etnia, alfabeta, estudios, anosMayorNivel,
-                         estadoCivil, viveSola, lugarControlPrenatal, numeroIdentidad})
+                        estadoCivil, viveSola, lugarControlPrenatal, numeroIdentidad,
+                        tbcFamiliar, tbcPersonal, diabetesFamiliar, diabetesPersonal,
+                        hipertensionFamiliar, hipertensionPersonal, pre_eclampsiaFamiliar, pre_eclampsiaPersonal,
+                        otrosAntecedentesFamiliares, otrosAntecedentesPersonales, cirugiaPelvica, infertibilidad,
+                        vih, cardio_nefropatia, ectopicos, condicion_grave, gestasPrevias, gestasPreviasNumero,
+                        tuvoAbortos, abortosNumero, tresAbortosConsecutivos, tuvoPartos, partosNumero, pesoMenor2500g,
+                        pesoMayor4000g, partoMultiple, numeroPartosVaginales, numeroPartosCesarea, numeroNacidosVivos,
+                        numeroViven, muertos1semana, muertosdespues1semana, numeroNacidosMuertos })
         })
         if (respuesta.ok){
             window.location.href = "/gestantes/list"
-        }
+        }   
+        const data = await respuesta.json();
+        
     } catch (error) {
-        console.log(error)
+        console.log(error);
     }
-});
+})
