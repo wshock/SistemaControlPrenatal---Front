@@ -130,3 +130,12 @@ function cambiarColorBotonSiDivVisible(div, boton) {
     }
 }
 
+
+// Por si se recarga la página, hay que revisar cuuál div está visible
+document.addEventListener("DOMContentLoaded", function() {
+     // FALTAAAAAAAAAAAAAAAAAA
+    //AQUÍ se le tienen que agregar las otras partes que tendrá el formulario
+    cambiarColorBotonSiDivVisible(divCarnéPerinatal, botonCarnéPerinatal);
+    cambiarColorBotonSiDivVisible(divAntecedentes, botonAntecedentes);
+    cambiarColorBotonSiDivVisible(divObstétricos, botonObstétricos);
+});

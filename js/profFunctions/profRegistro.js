@@ -1,4 +1,3 @@
-
 document.getElementById("formularioRegistro").addEventListener("submit", async (e) => {
     e.preventDefault();
 
