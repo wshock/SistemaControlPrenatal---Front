@@ -1,6 +1,6 @@
 const checkUsabaMetodoAnticonceptivo = document.getElementById("usabaAnticonceptivo");
 
-function primerosDivs(){
+function cargarDiv(){
     const divDesplegarFalloMetodoAnticonceptivo = document.getElementById("desplegarFalloMetodoAnticonceptivo");
 
     if (checkUsabaMetodoAnticonceptivo.checked) {
@@ -11,13 +11,13 @@ function primerosDivs(){
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    primerosDivs();
+    cargarDiv();
 
     document.addEventListener('change', function(event) {
         const target = event.target;
 
         if (target.matches('#usabaAnticonceptivo')) {
-            primerosDivs();
+            cargarDiv();
         } 
     });
 });
