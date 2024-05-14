@@ -1,4 +1,5 @@
 import { primerosDivs, actualizarDivs, actualizarNuevosDivs } from './profRegObstetricosEdit.js';
+import { cargarDiv } from './profRegGinecologicosEdit.js';
 
 async function obtenerInfoPaciente(){
     const urlActual = window.location.href;
@@ -28,6 +29,7 @@ async function alistarInputsParaEdit(){
 
     document.getElementById("nombreEdit").value = infoPaciente.nombres
     document.getElementById("apellidoEdit").value = infoPaciente.apellidos
+    document.getElementById("tipoDocumentoEdit").value = infoPaciente.tipoDocumento
     document.getElementById("domicilioEdit").value = infoPaciente.domicilio
     document.getElementById("localidadEdit").value = infoPaciente.localidad
     document.getElementById("correoEdit").value = infoPaciente.correo
@@ -42,6 +44,8 @@ async function alistarInputsParaEdit(){
     document.getElementById(infoPaciente.vive_sola.toLowerCase()+"_ViveSola").checked = true;
     document.getElementById("lugarControlPrenatalEdit").value = infoPaciente.lugarControlPrenatal
     document.getElementById("numeroIdentidadEdit").value = infoPaciente.numero_identidad;
+    document.getElementById("regimenEdit").value = infoPaciente.regimen;
+    document.getElementById("epsEdit").value = infoPaciente.eps;
 
  
     // Alistando datos del formulario Antecedentes: ?
@@ -114,6 +118,23 @@ async function alistarInputsParaEdit(){
     }
 
     // Alistando datos del formulario Ginecológicos:
+
+    ( infoPaciente.planeadoODeseado === "Si" ) ? document.getElementById("planeadoODeseadoEdit").checked = true : document.getElementById("planeadoODeseadoEdit").checked = false;
+    if ( infoPaciente.usabaAnticonceptivo === "Si" ) {
+        document.getElementById("usabaAnticonceptivoEdit").checked = true;
+        cargarDiv();
+
+        ( infoPaciente.barrera === "Si" ) ? document.getElementById("barreraEdit").checked = true : document.getElementById("barreraEdit").checked = false;
+        ( infoPaciente.DIU === "Si" ) ? document.getElementById("DIUEdit").checked = true : document.getElementById("DIUEdit").checked = false;
+        ( infoPaciente.hormonal === "Si" ) ? document.getElementById("hormonalEdit").checked = true : document.getElementById("hormonalEdit").checked = false;
+        ( infoPaciente.emergencia === "Si" ) ? document.getElementById("emergenciaEdit").checked = true : document.getElementById("emergenciaEdit").checked = false;
+        ( infoPaciente.ligadura === "Si" ) ? document.getElementById("ligaduraEdit").checked = true : document.getElementById("ligaduraEdit").checked = false;
+        ( infoPaciente.otro === "Si" ) ? document.getElementById("otroEdit").checked = true : document.getElementById("otroEdit").checked = false;
+
+
+    } else {
+        document.getElementById("usabaAnticonceptivoEdit").checked = false;
+    }
 
 }
 

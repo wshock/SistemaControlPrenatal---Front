@@ -8,6 +8,8 @@ document.getElementById("formularioRegistro").addEventListener("submit", async (
 
     const nombre = document.getElementById("nombreEdit").value
     const apellido = document.getElementById("apellidoEdit").value
+    const tipoDocumento = document.getElementById("tipoDocumentoEdit").value
+    const numeroIdentidad = document.getElementById("numeroIdentidadEdit").value
     const domicilio = document.getElementById("domicilioEdit").value
     const localidad = document.getElementById("localidadEdit").value
     const correo = document.getElementById("correoEdit").value
@@ -34,7 +36,8 @@ document.getElementById("formularioRegistro").addEventListener("submit", async (
         }
     }
     const lugarControlPrenatal = document.getElementById("lugarControlPrenatalEdit").value
-    const numeroIdentidad = document.getElementById("numeroIdentidadEdit").value
+    const regimen = document.getElementById("regimenEdit").value
+    const eps = document.getElementById("epsEdit").value
 
     // Juanpa, esto sería mejor si va en profRegistro :D
     // if (!nombre.trim() || !apellido.trim() || !domicilio.trim() || !localidad.trim() ||
@@ -116,22 +119,49 @@ document.getElementById("formularioRegistro").addEventListener("submit", async (
     } 
 
 
+
+
+    // Obteniendo datos del formulario Ginecológicos:
+
+    let planeadoODeseado = "N/A";
+    let usabaAnticonceptivo = "N/A";
+    let barrera = "N/A";
+    let DIU = "N/A";
+    let hormonal = "N/A";
+    let emergencia = "N/A";
+    let ligadura = "N/A";
+    let otro = "N/A";
+
+    if ( document.getElementById("planeadoODeseadoEdit").checked === true ) planeadoODeseado = "Si";
+
+    if ( document.getElementById("usabaAnticonceptivoEdit").checked === true ) {
+        usabaAnticonceptivo = "Si";
+        if ( document.getElementById("barreraEdit").checked === true ) barrera = "Si";
+        if ( document.getElementById("DIUEdit").checked === true ) DIU = "Si";
+        if ( document.getElementById("hormonalEdit").checked === true ) hormonal = "Si";
+        if ( document.getElementById("emergenciaEdit").checked === true ) emergencia = "Si";
+        if ( document.getElementById("ligaduraEdit").checked === true ) ligadura = "Si";
+        if ( document.getElementById("otroEdit").checked === true ) otro = "Si";
+    }
+
+
     try {
         const respuesta = await fetch(urlActual, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({nombre, apellido, domicilio, localidad, correo, 
-                        fecha_nacimiento, edad, etnia, alfabeta, estudios, anosMayorNivel,
-                        estadoCivil, viveSola, lugarControlPrenatal, numeroIdentidad,
-                        tbcFamiliar, tbcPersonal, diabetesFamiliar, diabetesPersonal,
-                        hipertensionFamiliar, hipertensionPersonal, pre_eclampsiaFamiliar, pre_eclampsiaPersonal,
-                        otrosAntecedentesFamiliares, otrosAntecedentesPersonales, cirugiaPelvica, infertibilidad,
-                        vih, cardio_nefropatia, ectopicos, condicion_grave, gestasPrevias, gestasPreviasNumero,
-                        tuvoAbortos, abortosNumero, tresAbortosConsecutivos, tuvoPartos, partosNumero, pesoMenor2500g,
-                        pesoMayor4000g, partoMultiple, numeroPartosVaginales, numeroPartosCesarea, numeroNacidosVivos,
-                        numeroViven, muertos1semana, muertosdespues1semana, numeroNacidosMuertos })
+            body: JSON.stringify({nombre, apellido, tipoDocumento, domicilio, localidad, correo, 
+                fecha_nacimiento, edad, etnia, alfabeta, estudios, anosMayorNivel,
+                estadoCivil, viveSola, lugarControlPrenatal, numeroIdentidad, regimen, eps,
+                tbcFamiliar, tbcPersonal, diabetesFamiliar, diabetesPersonal,
+                hipertensionFamiliar, hipertensionPersonal, pre_eclampsiaFamiliar, pre_eclampsiaPersonal,
+                otrosAntecedentesFamiliares, otrosAntecedentesPersonales, cirugiaPelvica, infertibilidad,
+                vih, cardio_nefropatia, ectopicos, condicion_grave, gestasPrevias, gestasPreviasNumero,
+                tuvoAbortos, abortosNumero, tresAbortosConsecutivos, tuvoPartos, partosNumero, pesoMenor2500g,
+                pesoMayor4000g, partoMultiple, numeroPartosVaginales, numeroPartosCesarea, numeroNacidosVivos,
+                numeroViven, muertos1semana, muertosdespues1semana, numeroNacidosMuertos, planeadoODeseado, usabaAnticonceptivo,
+                barrera, DIU, hormonal, emergencia, ligadura, otro })
         })
         if (respuesta.ok){
             window.location.href = "/gestantes/list"

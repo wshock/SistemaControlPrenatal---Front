@@ -5,6 +5,8 @@ document.getElementById("formularioRegistro").addEventListener("submit", async (
 
     const nombre = document.getElementById("nombre").value
     const apellido = document.getElementById("apellido").value
+    const tipoDocumento = document.getElementById("tipoDocumento").value
+    const numeroIdentidad = document.getElementById("numeroIdentidad").value
     const domicilio = document.getElementById("domicilio").value
     const localidad = document.getElementById("localidad").value
     const correo = document.getElementById("correo").value
@@ -31,7 +33,8 @@ document.getElementById("formularioRegistro").addEventListener("submit", async (
         }
     }
     const lugarControlPrenatal = document.getElementById("lugarControlPrenatal").value
-    const numeroIdentidad = document.getElementById("numeroIdentidad").value
+    const regimen = document.getElementById("regimen").value
+    const eps = document.getElementById("eps").value
 
 
     // Obteniendo datos del formulario Antecedentes:
@@ -103,6 +106,28 @@ document.getElementById("formularioRegistro").addEventListener("submit", async (
         }
     } 
 
+    // Obteniendo datos del formulario Ginecológicos:
+
+    let planeadoODeseado = "N/A";
+    let usabaAnticonceptivo = "N/A";
+    let barrera = "N/A";
+    let DIU = "N/A";
+    let hormonal = "N/A";
+    let emergencia = "N/A";
+    let ligadura = "N/A";
+    let otro = "N/A";
+
+    if ( document.getElementById("planeadoODeseado").checked === true ) planeadoODeseado = "Si";
+
+    if ( document.getElementById("usabaAnticonceptivo").checked === true ) {
+        usabaAnticonceptivo = "Si";
+        if ( document.getElementById("barrera").checked === true ) barrera = "Si";
+        if ( document.getElementById("DIU").checked === true ) DIU = "Si";
+        if ( document.getElementById("hormonal").checked === true ) hormonal = "Si";
+        if ( document.getElementById("emergencia").checked === true ) emergencia = "Si";
+        if ( document.getElementById("ligadura").checked === true ) ligadura = "Si";
+        if ( document.getElementById("otro").checked === true ) otro = "Si";
+    }
 
     try {
         const respuesta = await fetch("http://localhost:4000/gestantes/add", {
@@ -110,16 +135,17 @@ document.getElementById("formularioRegistro").addEventListener("submit", async (
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({nombre, apellido, domicilio, localidad, correo, 
+            body: JSON.stringify({nombre, apellido, tipoDocumento, domicilio, localidad, correo, 
                         fecha_nacimiento, edad, etnia, alfabeta, estudios, anosMayorNivel,
-                        estadoCivil, viveSola, lugarControlPrenatal, numeroIdentidad,
+                        estadoCivil, viveSola, lugarControlPrenatal, numeroIdentidad, regimen, eps,
                         tbcFamiliar, tbcPersonal, diabetesFamiliar, diabetesPersonal,
                         hipertensionFamiliar, hipertensionPersonal, pre_eclampsiaFamiliar, pre_eclampsiaPersonal,
                         otrosAntecedentesFamiliares, otrosAntecedentesPersonales, cirugiaPelvica, infertibilidad,
                         vih, cardio_nefropatia, ectopicos, condicion_grave, gestasPrevias, gestasPreviasNumero,
                         tuvoAbortos, abortosNumero, tresAbortosConsecutivos, tuvoPartos, partosNumero, pesoMenor2500g,
                         pesoMayor4000g, partoMultiple, numeroPartosVaginales, numeroPartosCesarea, numeroNacidosVivos,
-                        numeroViven, muertos1semana, muertosdespues1semana, numeroNacidosMuertos })
+                        numeroViven, muertos1semana, muertosdespues1semana, numeroNacidosMuertos, planeadoODeseado, usabaAnticonceptivo,
+                        barrera, DIU, hormonal, emergencia, ligadura, otro })
         })
         if (respuesta.ok){
             window.location.reload();

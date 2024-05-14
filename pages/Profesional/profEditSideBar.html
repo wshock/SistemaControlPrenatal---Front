@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/profReg-CarnePerinatal.css">
     <link rel="stylesheet" href="/css/profReg-Antecedentes.css">
     <link rel="stylesheet" href="/css/profReg-Obstétricos.css">
+    <link rel="stylesheet" href="/css/profReg-Ginecologicos.css">
     <title>EditSidebar</title>
 
 </head>
@@ -64,7 +65,7 @@
                 </li>
 
                 <li>
-                    <a id="boton-ginecológicos" href="#">
+                    <a id="boton-ginecologicos" href="#" onclick="cargarPagina('form-ginecologicos', 'boton-ginecologicos')">
                         <ion-icon name="rose-outline"></ion-icon>
                         <span>Ginecológicos</span>
                     </a>
@@ -94,17 +95,37 @@
                 <div class="form-page" id="form-carné-perinatal">
                     <!-- DESDE AQUÍ -->
                     <div class="campo-formulario">
-                        <label for="nombre">Nombre</label>
+                        <label for="nombre">Nombre</label><p class="asterisco">*</p>
                         <input type="text" id="nombreEdit" name="nombre" required>
                     </div>
         
                     <div class="campo-formulario">
-                        <label for="appelido">Apellido</label>
+                        <label for="appelido">Apellido</label><p class="asterisco">*</p>
                         <input type="text" id="apellidoEdit" name="appelido" required>
                     </div>
+
+                    <div class="campo-formulario">
+                        <label for="tipoDocumento">Tipo de documento</label><p class="asterisco">*</p>
+                        <select name="tipoDocumento" id="tipoDocumentoEdit" required>
+                            <option value="" disabled selected style="display: none;">Seleccione</option>
+                            <option value="cedula">Cédula de ciudadanía</option>
+                            <option value="cedulaDeExtranjeriaColombiana">Cédula de extranjería colombiana</option>
+                            <option value="cedulaExtranjera">Cédula extranjera</option>
+                            <option value="documentoExtrajero">Documento extranjero</option>
+                            <option value="pasaporte">Pasaporte</option>
+                            <option value="registroCivil">Registro civil</option>
+                            <option value="tarjetaDeIdentidad">Tarjeta de identidad</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="numeroIdentidad">Número documento</label><p class="asterisco">*</p>
+                        <input type="number" id="numeroIdentidadEdit" name="numeroIdentidad" required>
+                    </div>
+
         
                     <div class="campo-formulario">
-                        <label for="domicilio">Domicilio</label>
+                        <label for="domicilio">Domicilio</label><p class="asterisco">*</p>
                         <input type="text" id="domicilioEdit" name="domicilio" required>
                     </div>
         
@@ -114,13 +135,13 @@
                     </div>
         
                     <div class="campo-formulario">
-                        <label for="correo">Correo</label>
+                        <label for="correo">Correo</label><p class="asterisco">*</p>
                         <input type="email" id="correoEdit" name="correo">
                     </div>
         
                     <div class="campo-formulario">
-                        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
-                        <input type="date" id="fecha_nacimientoEdit" name="fecha_nacimiento">
+                        <label for="fecha_nacimiento">Fecha de Nacimiento:</label><p class="asterisco">*</p>
+                        <input type="date" id="fecha_nacimientoEdit" name="fecha_nacimiento" required>
                     </div>
         
                     <div class="campo-formulario">
@@ -135,13 +156,13 @@
                             <option value="Blanca">Blanca</option>
                             <option value="Indígena">Indígena</option>
                             <option value="Mestiza">Mestiza</option>
-                            <option value="Negra">Negra</option>
+                            <option value="Afrocolombiana">Afrocolombiana</option>
                             <option value="Otra">Otra</option>
                         </select>
                     </div>
                     
                     <div class="campo-formulario">
-                        <label>Alfabeta:</label>
+                        <label>Alfabeta</label><p class="asterisco">*</p>
                         <div>
                             <input type="radio" id="si_Alfabeta" name="alfabeta" value="si">
                             <label for="sí">Sí</label>
@@ -154,35 +175,36 @@
         
         
                     <div class="campo-formulario">
-                        <label for="estudios">Estudios</label>
-                        <select name="estudios" id="estudiosEdit">
+                        <label for="estudios">Estudios</label><p class="asterisco">*</p>
+                        <select name="estudios" id="estudiosEdit" required>
                             <option value="" disabled selected style="display: none;">Seleccione</option>
                             <option value="Ninguno">Ninguno</option>
                             <option value="Primaria">Primaria</option>
                             <option value="Secundaria">Secundaria</option>
-                            <option value="Universidad">Universidad</option>
+                            <option value="EstudiosSuperiores">Estudios superiores</option>
+                            <option value="Otros">Otro</option>
                         </select>
                     </div>
         
                     <div class="campo-formulario">
-                        <label for="añosMayorNivel">Años en el mayor nivel</label>
-                        <input type="number" name="añosMayorNivel" id="anosMayorNivelEdit">
+                        <label for="añosMayorNivel">Años en el mayor nivel</label><p class="asterisco">*</p>
+                        <input type="number" name="añosMayorNivel" id="anosMayorNivelEdit" required>
                     </div>
         
         
                     <div class="campo-formulario">
-                        <label for="estadoCivil">Estado civil</label>
-                        <select name="estadoCivil" id="estadoCivilEdit">
+                        <label for="estadoCivil">Estado civil</label><p class="asterisco">*</p>
+                        <select name="estadoCivil" id="estadoCivilEdit" required>
                             <option value="" disabled selected style="display: none;">Seleccione</option>
                             <option value="Casada">Casada</option>
-                            <option value="Unión estable">Unión estable</option>
+                            <option value="unionLibre">Unión libre</option>
                             <option value="Soltera">Soltera</option>
                             <option value="Otro">Otro</option>
                         </select>
                     </div>
         
                     <div class="campo-formulario">
-                        <label>Vive sola</label>
+                        <label>Vive sola</label><p class="asterisco">*</p>
                         <div>
                             <input type="radio" id="si_ViveSola" name="viveSola" value="si">
                             <label for="sí">Sí</label>
@@ -200,14 +222,26 @@
                     </div>
         
                     <div class="campo-formulario">
-                        <label for="lugarDelParto-Aborto">Lugar del parto/aborto</label>
+                        <label for="lugarDelParto-Aborto">Lugar del anterior parto/aborto</label>
                         <input type="text" id="lugarDelParto/AbortoEdit" name="lugarDelParto-Aborto" >
                     </div>
-                    
+
                     <div class="campo-formulario">
-                        <label for="numeroIdentidad">Número de identidad</label>
-                        <input type="number" id="numeroIdentidadEdit" name="numeroIdentidad" >
+                        <label for="regimen">Regimen</label><p class="asterisco">*</p>
+                        <select name="regimen" id="regimenEdit" required>
+                            <option value="" disabled selected style="display: none;">Seleccione</option>
+                            <option value="contributivo">Contributivo</option>
+                            <option value="subsidiado">Subsidiado</option>
+                            <option value="vinculado">Vinculado</option>
+                            <option value="otro">Otro</option>
+                        </select>
                     </div>
+
+                    <div class="campo-formulario">
+                        <label for="eps">Nombre EPS/ARS</label>
+                        <input type="text" id="epsEdit" name="eps">
+                    </div>
+                    
                     <div class="linea"></div>
                     <!-- HASTA AQUÍ --> 
                     <button class="next-btn" type="button" onclick="nextPage('form-antecedentes')">Siguiente</button>
@@ -326,6 +360,7 @@
     
                     <!-- HASTA AQUÍ --> 
                     <button class="prev-btn" type="button" onclick="prevPage('form-antecedentes')">Anterior</button>
+                    <button class="next-btn" type="button" onclick="nextPage('form-ginecologicos')">Siguiente</button>
                     
                     <div class="linea"></div>
                      <div class="campo-formulario">
@@ -333,7 +368,68 @@
                         <input type="submit" id="submit" name="submit" >
                     </div>
                 </div>
-    
+                
+                <!-- FORMULARIO GINECOLÓGICOS -->
+
+                <div class="form-page" id="form-ginecologicos">
+                    <!-- DESDE AQUÍ -->
+                    <div class="campo-formulario">
+                        <label for="planeadoODeseado">Embarazo planeado/deseado</label>
+                        <input type="checkbox" name="planeadoODeseado" id="planeadoODeseadoEdit" value="planeadoODeseadoTrue">
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="usabaAnticonceptivo">Usaba método anticonceptivo</label>
+                        <input type="checkbox" name="usabaAnticonceptivo" id="usabaAnticonceptivoEdit" value="usabaAnticonceptivoTrue">
+                    </div>
+
+                    <div id="desplegarFalloMetodoAnticonceptivo">
+                        <table>
+                            <tr class="campo-formulario">
+                                <td>Barrera</td>
+                                <td class="respuesta-checkbox"> <input type="checkbox" name="barrera" id="barreraEdit" value="barreraTrue"></td>
+                            </tr>
+            
+                            <tr class="campo-formulario">
+                                <td>DIU</td>
+                                <td class="respuesta-checkbox"><input type="checkbox" name="DIU" id="DIUEdit" value="DIUTrue"></td>
+                            </tr>
+            
+                            <tr class="campo-formulario">
+                                <td>Hormonal</td>
+                                <td class="respuesta-checkbox"><input type="checkbox" name="hormonal" id="hormonalEdit" value="hormonalTrue"></td>
+                            </tr>
+            
+                            <tr class="campo-formulario">
+                                <td>Emergencia</td>
+                                <td class="respuesta-checkbox"><input type="checkbox" name="emergencia" id="emergenciaEdit" value="emergenciaTrue"></td>
+                            </tr>
+            
+                            <tr class="campo-formulario">
+                                <td>Ligadura</td>
+                                <td class="respuesta-checkbox"><input type="checkbox" name="ligadura" id="ligaduraEdit" value="ligaduraTrue"></td>
+                            </tr>
+            
+                            <tr class="campo-formulario">
+                                <td>Otro / No aplica</td>
+                                <td class="respuesta-checkbox"><input type="checkbox" name="otro" id="otroEdit" value="otroTrue"></td>
+                            </tr>
+                        </table>
+                        
+                    </div>
+                    <div class="linea"></div>
+                    
+                    <!-- HASTA AQUÍ --> 
+
+                    <div class="campo-formulario">
+                        <button class="prev-btn" type="button" onclick="prevPage('form-obstétricos')">Anterior</button>
+                        <input type="submit" id="submit" name="submit" >
+                    </div>
+                </div>
+
+
+
+
     
             </form>
 
@@ -350,6 +446,8 @@
     <script type="module" src="/js/profFunctions/profRegObstetricosEdit.js"></script>
     <script src="/js/profFunctions/profSidebar.js"></script>
     <script src="/js/profFunctions/profEditarMadre.js"></script>
+    <script src="/js/profFunctions/profCalcularEdadEdit.js"></script>
+    <script type="module" src="/js/profFunctions/profRegGinecologicosEdit.js"></script>
     <script type="module" src="/js/profFunctions/profPreEditarMadre.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
