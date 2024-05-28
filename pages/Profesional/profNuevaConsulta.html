@@ -1,0 +1,85 @@
+<!-- Este HTML es como la plantilla general para crear otras páginas,
+    sirve pq ya está el fondo añadido para que las páginas sean iguales en general :D -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/profSideBar.css">
+    <link rel="stylesheet" href="/css/profRegistrar.css">
+    <script src="/js/script.js" defer></script>
+    <title>nuevaConsulta</title>
+
+</head>
+<body>
+    <svg class="mancha-superior" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#F8DDEC" fill-opacity="1" d="M0,224L60,218.7C120,213,240,203,360,170.7C480,139,600,85,720,58.7C840,32,960,32,1080,53.3C1200,75,1320,117,1380,138.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+    </svg>
+
+    <div class="formulario-container">
+        <div class="campo-formulario">
+            <label for="fecha_registro">Fecha de registro:</label><p class="asterisco">*</p>
+            <br>
+            <input type="date" id="fecha_registro" name="fecha_registro" required>
+        </div>
+
+        <div class="campo-formulario">
+            <label for="edad_gestacional">Edad gestacional</label>
+            <input type="text" id="edad_gestacional" name="edad_gestacional" required>
+        </div>
+
+        <div class="campo-formulario">
+            <label for="presion_arterial">Presión arterial</label><p class="asterisco">*</p>
+            <input type="text" id="presion_arterial" name="presion_arterial" required>
+        </div>
+
+        <div class="campo-formulario">
+            <label for="altura_uterina">Altura uterina</label><p class="asterisco">*</p>
+            <input type="text" id="altura_uterina" name="altura_uterina" required>
+        </div>
+
+        <div class="campo-formulario">
+            <label for="presentacion">Presentacion</label><p class="asterisco">*</p>
+            <input type="text" id="presentacion" name="presentacion" required>
+        </div>
+
+        <div class="campo-formulario">
+            <label for="fcf">FCF</label><p class="asterisco">*</p>
+            <input type="text" id="fcf" name="fcf" required>
+        </div>
+
+        <div class="campo-formulario">
+            <label for="movimientos_fetales">Movimientos fetales</label><p class="asterisco">*</p>
+            <input type="text" id="movimientos_fetales" name="movimientos_fetales" required>
+        </div>
+
+        <div class="campo-formulario">
+            <label for="hierro">Hierro</label><p class="asterisco">*</p>
+            <input type="text" id="hierro" name="hierro" required>
+        </div>
+
+        <div class="campo-formulario">
+            <label for="acido_folico">Ácido fólico</label><p class="asterisco">*</p>
+            <input type="text" id="acido_folico" name="acido_folico" required>
+        </div>
+
+        <div class="campo-formulario">
+            <label for="calcio">Calcio</label><p class="asterisco">*</p>
+            <input type="text" id="calcio" name="calcio" required>
+        </div>
+
+        <div class="campo-formulario">
+            <label for="comentarios">---</label><p class="asterisco">*</p>
+            <input type="text" id="comentarios" name="comentarios" required>
+        </div>
+
+    </div>
+
+
+    <svg class="mancha-inferior" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#DDF5F8" fill-opacity="1" d="M0,224L60,202.7C120,181,240,139,360,133.3C480,128,600,160,720,144C840,128,960,64,1080,48C1200,32,1320,64,1380,80L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+    </svg>
+</body>
+</html>

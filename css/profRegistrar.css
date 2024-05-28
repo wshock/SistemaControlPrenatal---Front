@@ -68,6 +68,14 @@ body {
     height: 15px;
 }
 
+.campo-formulario input[type="date"]{
+    margin: 5px;
+    border-radius: 3px;
+    padding: 10px;
+    width: 150px;
+    height: 35px;
+}
+
 .campo-formulario label {
     display: inline-block;
     margin-right: 10px;
