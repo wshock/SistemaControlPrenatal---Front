@@ -97,17 +97,17 @@ p{
     background-color: #ffffff; 
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .tarjeta {
     background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
     padding: 20px;
     margin: 20px auto; /* Centrar la tarjeta */
     width: 60%; /* Tamaño del 60% de la página */
-    height: 70px; /* Altura de la barra */
+    height: 50px; /* Altura de la barra */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -132,4 +132,8 @@ p{
 
 .tarjeta a:hover {
     background-color: #8ad3fd;
+}
+
+.contenedor-coincidencias p {
+    font-size: 20px;
 }

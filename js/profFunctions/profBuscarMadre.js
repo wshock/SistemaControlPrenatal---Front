@@ -45,15 +45,12 @@ document.getElementById("btnBuscarMadre").addEventListener("click", async (e) =>
         const tarjeta = document.createElement("div");
         tarjeta.classList.add("tarjeta");
         tarjeta.innerHTML = `
-            <p> Nombre:&nbsp;&nbsp;<strong> ${coincidencia.nombres} ${coincidencia.apellidos}</strong>,&nbsp; N.Identificación:&nbsp;&nbsp; <strong>${coincidencia.numero_identidad}</strong> </p>
+            <p> Nombre:&nbsp;<strong> ${coincidencia.nombres} ${coincidencia.apellidos}</strong>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; N.Identificación:&nbsp; <strong>${coincidencia.numero_identidad}</strong>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Fecha nacimiento:&nbsp; <strong>${coincidencia.fecha_nacimiento.slice(0, 10)}</strong> </p>
             <a href="/gestantes/edit/${coincidencia.id}">Entrar</a>
         `;
         contenedor.appendChild(tarjeta);
-
     })
-
-    // ya tengo lo que se ingresa en el front, falta organizar toda la parte del back (eliminar todo el código q era para listar)
-    // y ahora solo buscar y listar a la madre/gestaciones que se encuentren :D.
+    
 })
 
 

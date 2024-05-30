@@ -37,11 +37,11 @@ async function alistarInputsParaEdit(){
     document.getElementById("fecha_nacimientoEdit").value = fechaFormateada
     document.getElementById("edadEdit").value = infoPaciente.edad
     document.getElementById("etniaEdit").value = infoPaciente.etnia
-    document.getElementById(infoPaciente.alfabeta.toLowerCase()+"_Alfabeta").checked = true;
+    document.getElementById(infoPaciente.alfabeta.toLowerCase()+"_Alfabeta").checked = true
     document.getElementById("estudiosEdit").value = infoPaciente.estudios
     document.getElementById("anosMayorNivelEdit").value = infoPaciente.anos_mayor_nivel
     document.getElementById("estadoCivilEdit").value = infoPaciente.estado_civil
-    document.getElementById(infoPaciente.vive_sola.toLowerCase()+"_ViveSola").checked = true;
+    document.getElementById(infoPaciente.vive_sola.toLowerCase()+"_ViveSola").checked = true
     document.getElementById("lugarControlPrenatalEdit").value = infoPaciente.lugarControlPrenatal
     document.getElementById("numeroIdentidadEdit").value = infoPaciente.numero_identidad;
     document.getElementById("regimenEdit").value = infoPaciente.regimen;
