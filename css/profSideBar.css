@@ -128,7 +128,8 @@ body {
     border: none;
     border-radius: 10px;
     background-color: var(--color-boton);
-    color: var(--color-boton-texto)
+    color: var(--color-boton-texto);
+    cursor: pointer;
 }
 
 
@@ -147,6 +148,24 @@ body {
     margin-bottom: 5px;
 }
 
+.barra-lateral .navegacion button{
+    
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: var(--color-barra-lateral);
+    color: var(--coolor-texto-menu);
+    border: none;
+}
+
+.barra-lateral .navegacion button:hover{
+    background-color: var(--color-menu-hover);
+    color: var(--color-menu-hover-texto);
+}
+
 .barra-lateral .navegacion a{
     
     width: 100%;
@@ -157,7 +176,7 @@ body {
     border-radius: 10px;
     background-color: var(--color-barra-lateral);
     color: var(--coolor-texto-menu);
-
+    border: none;
 }
 
 .barra-lateral .navegacion a:hover{

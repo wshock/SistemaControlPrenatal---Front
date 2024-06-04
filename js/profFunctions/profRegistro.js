@@ -39,22 +39,27 @@ document.getElementById("formularioRegistro").addEventListener("submit", async (
 
     // Obteniendo datos del formulario Antecedentes:
 
+    let diabetesPersonal = "ninguno";
+    let otrosAntecedentesFamiliares = "N/A"
+    let otrosAntecedentesPersonales = "N/A"
+    let condicion_grave = "N/A"
+
     const tbcFamiliar = (document.getElementById("tbcFamiliar").checked === true) ? "Si" : "No";
     const tbcPersonal = (document.getElementById("tbcPersonal").checked === true) ? "Si" : "No";
     const diabetesFamiliar = (document.getElementById("diabetesFamiliar").checked === true) ? "Si" : "No";
-    const diabetesPersonal = document.getElementById("diabetesPersonal").value 
+    if (document.getElementById("diabetesPersonal").value != null) diabetesPersonal = document.getElementById("diabetesPersonal").value 
     const hipertensionFamiliar = (document.getElementById("hipertensionFamiliar").checked === true) ? "Si" : "No";
     const hipertensionPersonal = (document.getElementById("hipertensionPersonal").checked === true) ? "Si" : "No";
     const pre_eclampsiaFamiliar = (document.getElementById("pre_eclampsiaFamiliar").checked === true) ? "Si" : "No";
     const pre_eclampsiaPersonal = (document.getElementById("pre_eclampsiaPersonal").checked === true) ? "Si" : "No";
-    const otrosAntecedentesFamiliares = document.getElementById("otrosAntecedentesFamiliares").value
-    const otrosAntecedentesPersonales = document.getElementById("otrosAntecedentesPersonales").value
+    if (document.getElementById("otrosAntecedentesFamiliares").value != null) otrosAntecedentesFamiliares = document.getElementById("otrosAntecedentesFamiliares").value
+    if (document.getElementById("otrosAntecedentesPersonales").value != null) otrosAntecedentesPersonales = document.getElementById("otrosAntecedentesPersonales").value
     const cirugiaPelvica = (document.getElementById("cirugiaPelvica").checked === true) ? "Si" : "No";
     const infertibilidad = (document.getElementById("infertibilidad").checked === true) ? "Si" : "No";
     const vih = (document.getElementById("vih+").checked === true) ? "Si" : "No"; // diferente al campo de la bd
     const cardio_nefropatia = (document.getElementById("cardio_nefropatia").checked === true) ? "Si" : "No";
     const ectopicos = (document.getElementById("ectopicos").checked === true) ? "Si" : "No";
-    const condicion_grave = document.getElementById("condicion_grave").value
+    if (document.getElementById("condicion_grave").value != null) condicion_grave = document.getElementById("condicion_grave").value
 
 
     // Obteniendo datos del formulario Obstétricos:
@@ -82,27 +87,27 @@ document.getElementById("formularioRegistro").addEventListener("submit", async (
     if ( document.getElementById("gestasPrevias").checked === true ) {
 
         gestasPrevias = "Si";
-        gestasPreviasNumero = document.getElementById("gestasPreviasNumero").value
+        if (document.getElementById("gestasPreviasNumero").value != null) gestasPreviasNumero = document.getElementById("gestasPreviasNumero").value
 
         if ( document.getElementById("tuvoAbortos").checked === true ) {
             tuvoAbortos = "Si";
-            abortosNumero = document.getElementById("abortosNumero").value
+            if (document.getElementById("abortosNumero").value != null) abortosNumero = document.getElementById("abortosNumero").value
             tresAbortosConsecutivos = (document.getElementById("tresAbortosConsecutivos").checked === true) ? "Si" : "No";
         }
 
         if ( document.getElementById("tuvoPartos").checked === true ){
             tuvoPartos = "Si";
-            partosNumero = document.getElementById("partosNumero").value
+            if (partosNumero = document.getElementById("partosNumero").value != null) partosNumero = document.getElementById("partosNumero").value
             pesoMenor2500g = (document.getElementById("pesoMenor2500g").checked === true) ? "Si" : "No";
             pesoMayor4000g = (document.getElementById("pesoMayor4000g").checked === true) ? "Si" : "No";
             partoMultiple = (document.getElementById("partoMultiple").checked === true) ? "Si" : "No";
-            numeroPartosVaginales = document.getElementById("numeroPartosVaginales").value
-            numeroPartosCesarea = document.getElementById("numeroPartosCesarea").value
-            numeroNacidosVivos = document.getElementById("numeroNacidosVivos").value
-            numeroViven = document.getElementById("numeroViven").value
-            muertos1semana = document.getElementById("muertos1semana").value
-            muertosdespues1semana = document.getElementById("muertosdespues1semana").value
-            numeroNacidosMuertos = document.getElementById("numeroNacidosMuertos").value
+            if (document.getElementById("numeroPartosVaginales").value != null) numeroPartosVaginales = document.getElementById("numeroPartosVaginales").value
+            if (document.getElementById("numeroPartosCesarea").value != null) numeroPartosCesarea = document.getElementById("numeroPartosCesarea").value
+            if (document.getElementById("numeroNacidosVivos").value != null) numeroNacidosVivos = document.getElementById("numeroNacidosVivos").value
+            if (document.getElementById("numeroViven").value != null) numeroViven = document.getElementById("numeroViven").value
+            if (document.getElementById("muertos1semana").value != null) muertos1semana = document.getElementById("muertos1semana").value
+            if (document.getElementById("muertosdespues1semana").value != null) muertosdespues1semana = document.getElementById("muertosdespues1semana").value
+            if (document.getElementById("numeroNacidosMuertos").value != null) numeroNacidosMuertos = document.getElementById("numeroNacidosMuertos").value
         }
     } 
 
@@ -128,6 +133,8 @@ document.getElementById("formularioRegistro").addEventListener("submit", async (
         if ( document.getElementById("ligadura").checked === true ) ligadura = "Si";
         if ( document.getElementById("otro").checked === true ) otro = "Si";
     }
+
+
 
     try {
         const respuesta = await fetch("http://localhost:4000/gestantes/add", {

@@ -17,9 +17,6 @@ async function obtenerCoincidenciaPaciente(id){
 
 }
 
-
-
-
 document.getElementById("btnBuscarMadre").addEventListener("click", async (e) => {
 
     let idMadre = document.getElementById("busquedaMadre").value
@@ -52,53 +49,3 @@ document.getElementById("btnBuscarMadre").addEventListener("click", async (e) =>
     })
     
 })
-
-
-
-
-
-
-
-
-
-
-
-async function listarPacientes(){
-
-    const contenedor = document.getElementById("contenedor-pacientes")
-    contenedor.innerHTML = '';
-    const pacientes = await obtenerListaPacientes();
-
-    if (pacientes.length === 0){
-        contenedor.innerHTML = `
-            <div class="contenedorNoPaciente">
-                <h1>¡No tienes ninguna paciente!</h1>
-                <a href="/gestantes/add" class="botonAgregarPaciente">Agregar Paciente</a>
-            </div>
-        `;
-        return;
-    }
-
-    pacientes.forEach(paciente => {
-        const tarjeta = document.createElement('div');
-        tarjeta.classList.add('tarjeta');
-
-        tarjeta.innerHTML = `
-            <h2>${paciente.nombres}</h2>
-            <p>Edad: ${paciente.edad}</p>
-            <p>Dirección: ${paciente.domicilio}</p>
-            <p>Correo electrónico: ${paciente.correo}</p>
-            
-            <div class="botones">
-                <a href="/gestantes/list/delete/${paciente.id}" class="eliminar">Eliminar</a>
-                <a href="/gestantes/list/edit/${paciente.id}/" class="editar">Editar</a>
-            </div>
-            <!-- Esto es lo q esta sujeto a cambios, se puede añadir o quitar cosas jsjsj -->
-
-            
-        `;
-        contenedor.appendChild(tarjeta);
-    });
-}
-
-
