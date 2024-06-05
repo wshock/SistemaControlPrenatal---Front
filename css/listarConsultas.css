@@ -1,7 +1,7 @@
 .contenedorNoConsulta h1{
     text-align: center; 
-
 }
+
 
 .tarjeta {
     background-color: #ffffff;
@@ -9,16 +9,16 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
     padding: 20px;
     margin: 20px auto; /* Centrar la tarjeta */
-    width: 60%; /* Tamaño del 60% de la página */
-    height: 50px; /* Altura de la barra */
+    width: 90%; /* Tamaño del 60% de la página */
+    height: 80px; /* Altura de la barra */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .tarjeta p {
+    font-size: larger;
     margin: 0;
-    margin-bottom: 10px;
 }
 
 /* Estilos para el botón */
