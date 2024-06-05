@@ -19,6 +19,7 @@ async function obtenerInfoPaciente(){
     }
 }
 
+
 async function alistarInputsParaEdit(){
 
     const infoPaciente = await obtenerInfoPaciente();

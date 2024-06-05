@@ -164,7 +164,7 @@ document.getElementById("formularioRegistro").addEventListener("submit", async (
                 barrera, DIU, hormonal, emergencia, ligadura, otro })
         })
         if (respuesta.ok){
-            window.location.href = "/gestantes/list"
+            window.location.reload();
         }   
         const data = await respuesta.json();
         
