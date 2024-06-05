@@ -26,7 +26,7 @@ async function alistarInputsParaEdit(){
     // Alistando datos para su edición:
 
     // Alistando datos del formulario Carné perinatal:
-
+    
     document.getElementById("nombreEdit").value = infoPaciente.nombres
     document.getElementById("apellidoEdit").value = infoPaciente.apellidos
     document.getElementById("tipoDocumentoEdit").value = infoPaciente.tipoDocumento
