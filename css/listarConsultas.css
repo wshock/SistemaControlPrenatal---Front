@@ -1,0 +1,38 @@
+.contenedorNoConsulta h1{
+    text-align: center; 
+
+}
+
+.tarjeta {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+    padding: 20px;
+    margin: 20px auto; /* Centrar la tarjeta */
+    width: 60%; /* Tamaño del 60% de la página */
+    height: 50px; /* Altura de la barra */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tarjeta p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el botón */
+.tarjeta a {
+    padding: 10px 20px;
+    background-color: #75e3ff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tarjeta a:hover {
+    background-color: #8ad3fd;
+}

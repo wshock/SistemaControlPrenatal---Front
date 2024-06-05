@@ -14,7 +14,6 @@ async function obtenerCoincidenciaPaciente(id){
     } catch (error) {
 
     }
-
 }
 
 document.getElementById("btnBuscarMadre").addEventListener("click", async (e) => {
